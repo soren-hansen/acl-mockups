@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advantage Cleaning LLC – Floor Cleaning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ===== PAGE SWITCHER ===== */
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --accent:#1e4ca1;
+  --accent-green:#44953e;
+  --accent-light:#e8edf8;
+  --base:#f0f2f5;
+  --base-2:#fff;
+  --base-3:#1e4ca1;
+  --base-4:#1e4ca1;
+  --dk-blue:#0b2545;
+  --text:#1a1a2e;
+  --text-mid:#444;
+  --text-light:#666;
+  --border:#dde3f0;
+  --green-badge-bg:rgba(142,231,136,0.31);
+  --green-badge-color:#469240;
+  --max-w:1200px;
+  --radius:8px;
+}
+
+/* ===== BASE RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:#fff;padding-top:44px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;height:auto;display:block;}
+p{margin-bottom:1em;}
+p:last-child{margin-bottom:0;}
+ul{margin:0 0 1em 1.25em;}
+h1,h2,h3,h4,h5{line-height:1.25;color:var(--dk-blue);}
+
+/* ===== NAV ===== */
+.site-nav{position:fixed;top:44px;left:0;width:100%;background:#fff;border-bottom:1px solid var(--border);z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.site-nav .inner{max-width:var(--max-w);margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-weight:800;font-size:18px;color:var(--dk-blue);letter-spacing:-.5px;}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;}
+.nav-links a{color:var(--text);letter-spacing:.5px;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:2px;font-weight:600;}
+.nav-cta:hover{background:#163d85;text-decoration:none!important;}
+.nav-secondary{background:var(--dk-blue);padding:0;}
+.nav-secondary .inner{display:flex;justify-content:flex-end;gap:20px;font-size:13px;padding:6px 30px;}
+.nav-secondary a{color:#aab8cc;}
+.nav-secondary a:hover{color:#fff;}
+body{padding-top:108px;}
+
+/* ===== HERO ===== */
+.hero{background-color:var(--dk-blue);background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;position:relative;padding:100px 30px 80px;}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(11,37,69,.72);}
+.hero .inner{max-width:var(--max-w);margin:0 auto;position:relative;z-index:1;max-width:700px;}
+.hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;color:#7da4d8;text-transform:uppercase;margin-bottom:16px;}
+.hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.15;}
+.hero h1 mark{background:transparent;color:#7ee87a;}
+.hero-tagline{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:28px;max-width:600px;}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:40px;font-size:13px;color:#fff;font-weight:500;}
+.hero-badge svg{opacity:.8;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent-green);color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-primary:hover{background:#357a2f;text-decoration:none!important;}
+.btn-secondary{background:transparent;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(255,255,255,.5);}
+.btn-secondary:hover{border-color:#fff;text-decoration:none!important;}
+
+/* ===== LOCATIONS BAR ===== */
+.locations-bar{background:#f0f2f5;border-bottom:1px solid var(--border);padding:12px 30px;}
+.locations-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:24px;font-size:13px;}
+.locations-bar strong{color:var(--dk-blue);font-weight:700;}
+.loc-link{display:flex;align-items:center;gap:5px;color:var(--text-mid);}
+.loc-link:hover{color:var(--accent);}
+
+/* ===== TRUST ICONS BAR ===== */
+.trust-bar{background:#fff;border-bottom:1px solid var(--border);padding:14px 30px;}
+.trust-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-mid);}
+.trust-item svg{color:var(--accent);}
+
+/* ===== SECTION BASE ===== */
+.section{padding:72px 30px;}
+.section-inner{max-width:var(--max-w);margin:0 auto;}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.section-title{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--dk-blue);margin-bottom:16px;}
+.section-sub{font-size:17px;color:var(--text-mid);max-width:680px;margin-bottom:40px;}
+.section-alt{background:var(--base);}
+.section-dark{background:var(--dk-blue);}
+.section-dark .section-eyebrow{color:#7da4d8;}
+.section-dark .section-title{color:#fff;}
+.section-dark .section-sub{color:rgba(255,255,255,.75);}
+.section-dark p{color:rgba(255,255,255,.8);}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{background:#f7f8fc;border-bottom:1px solid var(--border);padding:10px 30px;font-size:13px;color:var(--text-light);}
+.breadcrumb .inner{max-width:var(--max-w);margin:0 auto;}
+.breadcrumb a{color:var(--text-mid);}
+
+/* ===== INTRO SPLIT ===== */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.intro-grid img{border-radius:var(--radius);}
+@media(max-width:768px){.intro-grid{grid-template-columns:1fr;}}
+.intro-text h2{font-size:clamp(20px,2.5vw,30px);font-weight:800;margin-bottom:16px;}
+.intro-text p{font-size:16px;color:var(--text-mid);margin-bottom:14px;}
+
+/* ===== 5 PILLARS ===== */
+.pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.pillars-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.pillars-grid{grid-template-columns:repeat(2,1fr);}}
+.pillar-card{text-align:center;padding:24px 16px;}
+.pillar-num{width:60px;height:60px;margin:0 auto 16px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;}
+.pillar-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.pillar-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== QUALITY STEPS ===== */
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
+.step-card{text-align:center;padding:24px 16px;background:#fff;border-radius:var(--radius);border:1px solid var(--border);}
+.step-num{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;}
+.step-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.step-card p{font-size:13px;color:var(--text-light);}
+.steps-cta{text-align:center;margin-top:32px;}
+.btn-outline{display:inline-block;padding:11px 24px;border:2px solid var(--accent);color:var(--accent)!important;border-radius:2px;font-weight:600;font-size:14px;}
+.btn-outline:hover{background:var(--accent);color:#fff!important;text-decoration:none!important;}
+
+/* ===== SERVICES GRID ===== */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+.service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;}
+.service-card svg{color:var(--accent);}
+.service-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.service-card p{font-size:13px;color:var(--text-mid);flex:1;}
+.service-badge{display:inline-block;background:var(--green-badge-bg);color:var(--green-badge-color);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid rgba(70,146,64,.25);}
+
+/* ===== SPECIALIST SERVICES ===== */
+.specialist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.specialist-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.specialist-grid{grid-template-columns:1fr;}}
+
+/* ===== INDUSTRIES ===== */
+.industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+@media(max-width:900px){.industries-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.industries-grid{grid-template-columns:1fr;}}
+.industry-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+.industry-card img{width:100%;height:180px;object-fit:cover;}
+.industry-card-body{padding:20px;}
+.industry-card-body h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.industry-card-body .tag{font-size:12px;color:var(--text-light);margin-bottom:12px;}
+.industry-card-body a{font-size:13px;font-weight:600;color:var(--accent);}
+
+/* ===== WHY CHOOSE US ===== */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px;}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr;}}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px;}
+.why-card svg{color:var(--accent);}
+.why-card h4{font-size:16px;font-weight:700;color:var(--dk-blue);}
+.why-card p{font-size:14px;color:var(--text-mid);}
+.why-image{margin-top:40px;border-radius:var(--radius);overflow:hidden;}
+.why-image img{width:100%;max-height:380px;object-fit:cover;}
+
+/* ===== DELIVERABLES ===== */
+.deliv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:768px){.deliv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.deliv-grid{grid-template-columns:1fr;}}
+.deliv-card{padding:24px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:10px;}
+.deliv-card svg{color:var(--accent);}
+.deliv-card h3{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.deliv-card p{font-size:13px;color:var(--text-mid);}
+
+/* ===== STATS ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;}
+@media(max-width:600px){.stats-grid{grid-template-columns:1fr;}}
+.stat-card{text-align:center;}
+.stat-num{font-size:clamp(36px,5vw,60px);font-weight:900;color:#fff;margin-bottom:6px;}
+.stat-label{font-size:14px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:8px;}
+.stat-desc{font-size:13px;color:rgba(255,255,255,.65);}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr;}}
+.testimonial{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:32px;}
+.testimonial blockquote{font-size:16px;font-style:italic;color:rgba(255,255,255,.9);line-height:1.7;margin-bottom:16px;}
+.testimonial cite{font-size:12px;font-weight:700;letter-spacing:1px;color:#7da4d8;text-transform:uppercase;}
+
+/* ===== COVERAGE ===== */
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+@media(max-width:768px){.coverage-grid{grid-template-columns:repeat(2,1fr);}}
+.coverage-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;}
+.coverage-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.coverage-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin-top:32px;}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+.faq-item:first-child{padding-top:0;}
+.faq-q{font-size:16px;font-weight:700;color:var(--dk-blue);margin-bottom:10px;}
+.faq-a{font-size:15px;color:var(--text-mid);line-height:1.65;}
+
+/* ===== CTA BAND ===== */
+.cta-band{background:var(--accent);padding:60px 30px;text-align:center;}
+.cta-band h2{color:#fff;font-size:clamp(22px,3vw,32px);font-weight:800;margin-bottom:12px;}
+.cta-band p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:28px;}
+.btn-white{background:#fff;color:var(--accent)!important;padding:14px 30px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-white:hover{background:#e8edf8;text-decoration:none!important;}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--dk-blue);padding:40px 30px 24px;color:rgba(255,255,255,.6);font-size:13px;}
+.site-footer .inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+
+</style>
+</head>
+<body>
+</div>
+
+<div class="hero" style="background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Warehouse-floor-cleaning-auto-scrubbers-cleaning-warehouse-concrete-floor-1024x512.webp');">
+  <div class="inner">
+    <p class="hero-eyebrow">Commercial Floor Care &middot; NYC &middot; NJ &middot; CT</p>
+    <h1>Commercial Floor Cleaning Services That<br><mark>Protect Your Capital Assets</mark></h1>
+    <p class="hero-tagline">Documented floor care for facility managers who can&rsquo;t afford failed maintenance. Every surface type, every project &mdash; audit-ready QA records included as standard.</p>
+    <div class="hero-badges">
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Surface-specific protocols</div>
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Documentation included</div>
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
+    </div>
+    <div class="hero-btns"><a href="#" class="btn-primary">Request a Floor Assessment</a><a href="#" class="btn-secondary">Our Quality System</a></div>
+  </div>
+</div>
+<div class="locations-bar"><div class="inner"><strong>Locations We Serve:</strong><a href="#" class="loc-link">&#128205; New York</a><a href="#" class="loc-link">&#128205; New Jersey</a><a href="#" class="loc-link">&#128205; Connecticut</a></div></div>
+<div class="breadcrumb"><div class="inner"><a href="#">Home</a> &raquo; <strong>Commercial Floor Cleaning Services</strong></div></div>
+
+<div class="section"><div class="section-inner">
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p class="section-eyebrow">Professional Floor Care Done Right</p>
+      <h2 class="section-title">Surface-Specific Care That Protects Your Floors &amp; Investment</h2>
+      <p>Commercial floors are one of the highest-cost elements of any facility &mdash; and one of the most damaged by incorrect cleaning. Using the wrong products or equipment on VCT, marble, concrete, or carpet accelerates wear, voids manufacturer warranties, and creates replacement costs that far exceed the cost of correct maintenance from the start.</p>
+      <p>Advantage Cleaning&rsquo;s floor care teams are trained in surface-specific chemistry and equipment. We never use a one-size-fits-all approach to floor cleaning because floors are not one-size-fits-all surfaces. Every floor care visit is documented &mdash; products used, process applied, condition before and after &mdash; so you have a complete maintenance record that protects your facility.</p>
+    </div>
+    <div><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Warehouse-floor-cleaning-auto-scrubbers-cleaning-warehouse-concrete-floor-1024x512.webp" alt="Commercial floor cleaning services NYC" loading="lazy"></div>
+  </div>
+</div></div>
+
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">Our Methodology</p>
+  <h2 class="section-title">Four Phases. Evidence at Every Step.</h2>
+  <p class="section-sub">Every floor care engagement follows the same four-step process &mdash; from daily maintenance to full restoration. Each phase produces a written record you can use in an audit, an insurance review, or a board presentation.</p>
+  <div class="steps-grid">
+    <div class="step-card"><div class="step-num">1</div><h4>Protect</h4><p>Cover finished work. Identify sensitive areas. Plan debris removal routes.</p></div>
+    <div class="step-card"><div class="step-num">2</div><h4>Remove</h4><p>Dust removal. Adhesive residue removal. Grout/marble haze treatment.</p></div>
+    <div class="step-card"><div class="step-num">3</div><h4>Detail</h4><p>Surface-specific cleaning. Edge and corner attention. Final inspection.</p></div>
+    <div class="step-card"><div class="step-num">4</div><h4>Document</h4><p>Before/after photos. Completion verification. Client-ready documentation.</p></div>
+  </div>
+</div></div>
+
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">Floor Types We Service</p>
+  <h2 class="section-title">Every Surface Type. Surface-Specific Protocol.</h2>
+  <p class="section-sub">Each floor type requires different chemistry, equipment, and maintenance cycles. Using the wrong approach accelerates wear, voids warranties, and creates replacement costs far exceeding correct care.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 9l10 13L22 9z"/><path d="M2 9h20"/></svg>
+      <h4>VCT (Vinyl Composition Tile)</h4>
+      <p>VCT is the most common commercial hard floor &mdash; and the most frequently damaged by incorrect stripping. The finish protects the tile itself. Strip it incorrectly, skip neutralisation, or under-coat the reapplication, and you&rsquo;re accelerating the tile&rsquo;s lifecycle toward replacement.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-mid);"><strong>What we do:</strong> Full strip to bare tile &mdash; dwell time documented, neutralisation step verified, 4&ndash;6 finish coats, 30-min dry time between each.</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--text-mid);"><strong>You receive:</strong> Before/after photographs, dwell time log, coat-by-coat application record, supervisor sign-off. Inspection records available on demand.</p>
+      <span class="service-badge">Annual / Semi-annual &middot; Green cleaning compliant</span>
+    </div>
+    <div class="why-card">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="14" width="20" height="8" rx="1"/><path d="M2 14l5-6h10l5 6"/></svg>
+      <h4>Carpet</h4>
+      <p>Daily vacuuming only removes surface soil. Embedded particulates &mdash; the ones that cause premature wear &mdash; require hot-water extraction. Skipping scheduled deep cleans shortens carpet lifecycle and increases allergen load.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-mid);"><strong>What we do:</strong> HEPA vacuuming + spot treatment daily. Deep clean via hot-water extraction with pre-spray, agitation, and neutralising rinse every 3&ndash;6 months.</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--text-mid);"><strong>You receive:</strong> Before/after photographs, product &amp; dwell time log, moisture reading post-extraction, stain treatment record, warranty preservation documentation.</p>
+      <span class="service-badge">Quarterly &middot; Green cleaning compliant</span>
+    </div>
+    <div class="why-card">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      <h4>Marble &amp; Natural Stone</h4>
+      <p>Marble and natural stone are capital assets. Restoration via diamond progression defers replacement &mdash; often by decades. The risk is damage from incorrect products: acidic cleaners etch marble permanently. We assess condition before any work begins.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-mid);"><strong>What we do:</strong> Diamond progression: grind &rarr; hone &rarr; densify &rarr; polish. Grit sequence logged at each stage. Densifier with documented cure period. Sealer with product spec logged. Stone-safe daily maintenance.</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--text-mid);"><strong>You receive:</strong> Condition photographs at each stage, grit progression log, sealer product specification, slip-resistance verification documentation.</p>
+      <span class="service-badge">Annual &middot; Class A</span>
+    </div>
+    <div class="why-card">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="14" width="20" height="8" rx="1"/><path d="M2 14l5-6h10l5 6"/></svg>
+      <h4>Concrete (Warehouse &amp; Industrial)</h4>
+      <p>Warehouse and industrial concrete floors accumulate oil, rubber, and chemical residue that creates slip hazards and degrades the epoxy coating over time. Routine degreasing and auto-scrubbing is a liability management tool.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-mid);"><strong>What we do:</strong> Industrial degreasing with agitation, auto-scrubbing for embedded contamination, oil &amp; rubber residue extraction, epoxy inspection and repair, anti-slip treatment for hazard zones.</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--text-mid);"><strong>You receive:</strong> Hazard identification log, chemical application records, corrective action documentation, post-treatment slip-resistance readings, safety compliance file.</p>
+      <span class="service-badge">Quarterly &middot; Safety compliance records</span>
+    </div>
+    <div class="why-card">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      <h4>Hardwood &amp; Sports Floors</h4>
+      <p>Hardwood is unforgiving of incorrect care. Excess moisture, acidic cleaners, or abrasive equipment causes permanent cupping, warping, and finish damage. Our sports floor protocols follow manufacturer specifications &mdash; protecting both the floor and any applicable warranty.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-mid);"><strong>What we do:</strong> Stone-safe daily dust mop. Moisture-controlled damp mop. Seasonal conditioning and screen-and-recoat. Sports floors: MFMA protocol, line marking protection.</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--text-mid);"><strong>You receive:</strong> Product log with manufacturer approval, moisture reading records, finish inspection report, before/after photographs, sports floor condition report.</p>
+      <span class="service-badge">Seasonal &middot; Green cleaning compliant</span>
+    </div>
+    <div class="why-card">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+      <h4>Grout &amp; Tile</h4>
+      <p>Grout is porous. Without sealing, it absorbs bacteria, oils, and cleaning chemicals. Discolouration that looks cosmetic is often a hygiene issue. Restoration removes embedded contamination and reseals the surface, making routine cleaning effective again.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-mid);"><strong>What we do:</strong> High-pressure hot-water grout cleaning, alkaline pre-treatment, steam sanitisation for healthcare/food areas, grout sealer with product spec logged.</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--text-mid);"><strong>You receive:</strong> Before/after condition photographs, chemical &amp; dwell time log, sealer specification &amp; application record. Hygiene documentation available for healthcare environments.</p>
+      <span class="service-badge">Annual &middot; CDC Protocol</span>
+    </div>
+  </div>
+</div></div>
+
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">Regular Floor Maintenance</p>
+  <h2 class="section-title">Daily Floor Maintenance Services</h2>
+  <p class="section-sub">Consistent daily maintenance is the foundation of any floor care programme. Surface-specific chemistry and equipment for each floor type, every visit.</p>
+  <div class="services-grid">
+    <div class="service-card"><h4>Daily Floor Maintenance</h4><p>Surface-appropriate daily cleaning &mdash; dry and wet mopping, vacuuming &mdash; performed systematically every operational day. Correct chemistry and equipment for each floor type.</p></div>
+    <div class="service-card"><h4>Buffing &amp; Burnishing</h4><p>High-speed buffing and burnishing to maintain VCT and hard floor finish between deep cleaning cycles &mdash; preserving the finish investment and extending time between strip-and-wax services.</p></div>
+    <div class="service-card"><h4>Wet Mopping &amp; Scrubbing</h4><p>Thorough machine scrubbing for heavily soiled or high-traffic hard floor areas &mdash; removing embedded grime that daily flat mopping cannot address.</p></div>
+    <div class="service-card"><h4>Carpet Vacuuming &amp; Spotting</h4><p>Daily HEPA-equipped carpet vacuuming that removes embedded soil and allergens, combined with routine spot treatment of high-traffic staining areas.</p></div>
+  </div>
+</div></div>
+
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">Specialist Floor Cleaning Services</p>
+  <h2 class="section-title">Deep Cleaning &amp; Restoration</h2>
+  <div class="specialist-grid">
+    <div class="service-card"><h4>Commercial Floor Strip &amp; Wax (VCT)</h4><p>Complete stripping of degraded finish layers and application of fresh protective wax coats. Documented frequency based on your traffic load.</p><span class="service-badge">Annual</span></div>
+    <div class="service-card"><h4>Hot-Water Extraction (Carpet)</h4><p>Deep carpet cleaning via commercial hot-water extraction &mdash; removing embedded soil, stains, and allergens. Typically scheduled every 3&ndash;6 months.</p><span class="service-badge">Quarterly</span></div>
+    <div class="service-card"><h4>Stone &amp; Marble Diamond Grinding &amp; Polishing</h4><p>Multi-stage diamond progression with grit sequence documentation. Densifier application logged with cure periods. Final documentation includes condition photographs and sealer specification.</p><span class="service-badge">Annual &middot; Class A</span></div>
+    <div class="service-card"><h4>Concrete Floor Cleaning</h4><p>Specialist concrete cleaning, degreasing, sealing, and resurfacing for warehouse, industrial, and large commercial environments &mdash; maintaining safety, appearance, and dust suppression.</p></div>
+    <div class="service-card"><h4>Floor Restoration</h4><p>Full restoration programmes for neglected or heavily worn floors &mdash; VCT, tile, stone, concrete, and carpet. Honest assessment of what is achievable before any work begins.</p></div>
+    <div class="service-card"><h4>Anti-Slip Treatment &amp; Certification</h4><p>Coefficient of friction testing pre- and post-treatment with ASTM-compliant documentation. Treatment application logged. Certification documentation formatted for safety compliance files.</p></div>
+  </div>
+</div></div>
+
+<div class="section section-dark"><div class="section-inner">
+  <p class="section-eyebrow">Track Record</p>
+  <h2 class="section-title">What Facility Managers See in Practice</h2>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num">Weekly</div><div class="stat-label">KPI Score Charts</div><div class="stat-desc">Floor condition scoring across all zones, every week. Scores below threshold trigger same-shift escalation &mdash; you&rsquo;re notified after resolution, not asked to manage it.</div></div>
+    <div class="stat-card"><div class="stat-num">On Demand</div><div class="stat-label">Inspection Records</div><div class="stat-desc">Every floor care visit documented. Products used, process applied, condition before and after. Available on demand for audits, insurance reviews, or board presentations.</div></div>
+    <div class="stat-card"><div class="stat-num">7+</div><div class="stat-label">Years &mdash; Major NYC Attraction</div><div class="stat-desc">A major NYC visitor attraction has retained Advantage Cleaning through three facility management transitions. Same accountability system, same documentation standards.</div></div>
+  </div>
+  <div class="testimonials-grid" style="margin-top:48px;">
+    <div class="testimonial"><blockquote>&ldquo;Advantage Cleaning has been a truly fantastic partner. Once hired, you don&rsquo;t have to think about the project again. They take care of scheduling and will finish the project no matter the circumstances. We have used them in schools and universities and have never had a complaint. If you need a cleaning service that is fast and efficient, this is the choice.&rdquo;</blockquote><cite>&mdash; Facility Manager, NYC</cite></div>
+    <div class="testimonial"><blockquote>&ldquo;I have been consistently impressed by the service and support. The staff is well-trained, reliable, and engaged. I have found them to be honest, forthright, and highly accountable.&rdquo;</blockquote><cite>&mdash; Director, Facilities &amp; New Property Real Estate &middot; Charter School Network, NYC</cite></div>
+  </div>
+</div></div>
+
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">Our Recent Projects</p>
+  <h2 class="section-title">Before &amp; After &mdash; Recent Projects Across NYC</h2>
+  <div class="specialist-grid">
+    <div class="service-card"><h4>Marble Lobby Restoration &mdash; Office Tower, Midtown</h4><p>Annual marble honing, polishing, and sealing. Condition photographs documented at each stage.</p><span class="service-badge">Midtown &middot; Class A</span></div>
+    <div class="service-card"><h4>VCT Strip &amp; Wax &mdash; Charter School, Brooklyn</h4><p>Annual strip and wax. Green cleaning compliant products. Before &amp; after on record.</p><span class="service-badge">Brooklyn &middot; Annual</span></div>
+    <div class="service-card"><h4>Vinyl Floor Restoration &mdash; Office Space, Harlem</h4><p>4-phase process after tenant renovation. Certificate of Occupancy ready on schedule.</p><span class="service-badge">Harlem &middot; 4-phase</span></div>
+    <div class="service-card"><h4>Warehouse Floor Programme &mdash; Distribution Centre, New Jersey</h4><p>120,000 sq ft, 3&times; weekly floor scrubbing. Walking-working surface maintenance records per visit.</p><span class="service-badge">120,000 sq ft &middot; New Jersey</span></div>
+  </div>
+</div></div>
+
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">Frequently Asked Questions</p>
+  <h2 class="section-title">What Facility Managers Ask Us</h2>
+  <div class="faq-list">
+    <div class="faq-item"><p class="faq-q">How do you handle buildings with multiple floor types?</p><p class="faq-a">Each surface type gets its own protocol &mdash; tile in restrooms, carpet in offices, concrete in loading areas &mdash; with appropriate products and equipment for each. No one-size-fits-all approach.</p></div>
+    <div class="faq-item"><p class="faq-q">How often should commercial floors be deep cleaned?</p><p class="faq-a">It depends on traffic and floor type. A typical programme: daily maintenance, hot-water carpet extraction every 3&ndash;6 months, VCT strip and wax annually or semi-annually for high-traffic areas. We assess the specific facility and recommend accordingly.</p></div>
+    <div class="faq-item"><p class="faq-q">What documentation is provided?</p><p class="faq-a">Complete documentation for every visit &mdash; cleaning logs, product certifications, quality scores, and compliance verification. All records available on demand and formatted for regulatory or audit presentations.</p></div>
+    <div class="faq-item"><p class="faq-q">How do you manage compliance requirements?</p><p class="faq-a">Compliance requirements are embedded in your custom cleaning plan from day one. Our system tracks applicable requirements and integrates them automatically &mdash; without additional management overhead on your part.</p></div>
+  </div>
+</div></div>
+
+<div class="cta-band"><h2>Let&rsquo;s Talk About Your Floors</h2><p>Our assessment takes 45 minutes and delivers a written scope within 48 hours. Photographic documentation of current conditions and preliminary recommendations included. No obligation.</p><a href="#" class="btn-white">Request a Floor Assessment</a></div>
+</div><!-- /floor-cleaning page -->
+
+<!-- ==================== DEEP CLEANING PAGE ==================== -->
+</body>
+</html>

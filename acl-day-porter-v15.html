@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advantage Cleaning LLC – Day Porter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ===== PAGE SWITCHER ===== */
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --accent:#1e4ca1;
+  --accent-green:#44953e;
+  --accent-light:#e8edf8;
+  --base:#f0f2f5;
+  --base-2:#fff;
+  --base-3:#1e4ca1;
+  --base-4:#1e4ca1;
+  --dk-blue:#0b2545;
+  --text:#1a1a2e;
+  --text-mid:#444;
+  --text-light:#666;
+  --border:#dde3f0;
+  --green-badge-bg:rgba(142,231,136,0.31);
+  --green-badge-color:#469240;
+  --max-w:1200px;
+  --radius:8px;
+}
+
+/* ===== BASE RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:#fff;padding-top:44px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;height:auto;display:block;}
+p{margin-bottom:1em;}
+p:last-child{margin-bottom:0;}
+ul{margin:0 0 1em 1.25em;}
+h1,h2,h3,h4,h5{line-height:1.25;color:var(--dk-blue);}
+
+/* ===== NAV ===== */
+.site-nav{position:fixed;top:44px;left:0;width:100%;background:#fff;border-bottom:1px solid var(--border);z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.site-nav .inner{max-width:var(--max-w);margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-weight:800;font-size:18px;color:var(--dk-blue);letter-spacing:-.5px;}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;}
+.nav-links a{color:var(--text);letter-spacing:.5px;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:2px;font-weight:600;}
+.nav-cta:hover{background:#163d85;text-decoration:none!important;}
+.nav-secondary{background:var(--dk-blue);padding:0;}
+.nav-secondary .inner{display:flex;justify-content:flex-end;gap:20px;font-size:13px;padding:6px 30px;}
+.nav-secondary a{color:#aab8cc;}
+.nav-secondary a:hover{color:#fff;}
+body{padding-top:108px;}
+
+/* ===== HERO ===== */
+.hero{background-color:var(--dk-blue);background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;position:relative;padding:100px 30px 80px;}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(11,37,69,.72);}
+.hero .inner{max-width:var(--max-w);margin:0 auto;position:relative;z-index:1;max-width:700px;}
+.hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;color:#7da4d8;text-transform:uppercase;margin-bottom:16px;}
+.hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.15;}
+.hero h1 mark{background:transparent;color:#7ee87a;}
+.hero-tagline{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:28px;max-width:600px;}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:40px;font-size:13px;color:#fff;font-weight:500;}
+.hero-badge svg{opacity:.8;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent-green);color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-primary:hover{background:#357a2f;text-decoration:none!important;}
+.btn-secondary{background:transparent;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(255,255,255,.5);}
+.btn-secondary:hover{border-color:#fff;text-decoration:none!important;}
+
+/* ===== LOCATIONS BAR ===== */
+.locations-bar{background:#f0f2f5;border-bottom:1px solid var(--border);padding:12px 30px;}
+.locations-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:24px;font-size:13px;}
+.locations-bar strong{color:var(--dk-blue);font-weight:700;}
+.loc-link{display:flex;align-items:center;gap:5px;color:var(--text-mid);}
+.loc-link:hover{color:var(--accent);}
+
+/* ===== TRUST ICONS BAR ===== */
+.trust-bar{background:#fff;border-bottom:1px solid var(--border);padding:14px 30px;}
+.trust-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-mid);}
+.trust-item svg{color:var(--accent);}
+
+/* ===== SECTION BASE ===== */
+.section{padding:72px 30px;}
+.section-inner{max-width:var(--max-w);margin:0 auto;}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.section-title{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--dk-blue);margin-bottom:16px;}
+.section-sub{font-size:17px;color:var(--text-mid);max-width:680px;margin-bottom:40px;}
+.section-alt{background:var(--base);}
+.section-dark{background:var(--dk-blue);}
+.section-dark .section-eyebrow{color:#7da4d8;}
+.section-dark .section-title{color:#fff;}
+.section-dark .section-sub{color:rgba(255,255,255,.75);}
+.section-dark p{color:rgba(255,255,255,.8);}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{background:#f7f8fc;border-bottom:1px solid var(--border);padding:10px 30px;font-size:13px;color:var(--text-light);}
+.breadcrumb .inner{max-width:var(--max-w);margin:0 auto;}
+.breadcrumb a{color:var(--text-mid);}
+
+/* ===== INTRO SPLIT ===== */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.intro-grid img{border-radius:var(--radius);}
+@media(max-width:768px){.intro-grid{grid-template-columns:1fr;}}
+.intro-text h2{font-size:clamp(20px,2.5vw,30px);font-weight:800;margin-bottom:16px;}
+.intro-text p{font-size:16px;color:var(--text-mid);margin-bottom:14px;}
+
+/* ===== 5 PILLARS ===== */
+.pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.pillars-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.pillars-grid{grid-template-columns:repeat(2,1fr);}}
+.pillar-card{text-align:center;padding:24px 16px;}
+.pillar-num{width:60px;height:60px;margin:0 auto 16px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;}
+.pillar-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.pillar-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== QUALITY STEPS ===== */
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
+.step-card{text-align:center;padding:24px 16px;background:#fff;border-radius:var(--radius);border:1px solid var(--border);}
+.step-num{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;}
+.step-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.step-card p{font-size:13px;color:var(--text-light);}
+.steps-cta{text-align:center;margin-top:32px;}
+.btn-outline{display:inline-block;padding:11px 24px;border:2px solid var(--accent);color:var(--accent)!important;border-radius:2px;font-weight:600;font-size:14px;}
+.btn-outline:hover{background:var(--accent);color:#fff!important;text-decoration:none!important;}
+
+/* ===== SERVICES GRID ===== */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+.service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;}
+.service-card svg{color:var(--accent);}
+.service-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.service-card p{font-size:13px;color:var(--text-mid);flex:1;}
+.service-badge{display:inline-block;background:var(--green-badge-bg);color:var(--green-badge-color);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid rgba(70,146,64,.25);}
+
+/* ===== SPECIALIST SERVICES ===== */
+.specialist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.specialist-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.specialist-grid{grid-template-columns:1fr;}}
+
+/* ===== INDUSTRIES ===== */
+.industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+@media(max-width:900px){.industries-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.industries-grid{grid-template-columns:1fr;}}
+.industry-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+.industry-card img{width:100%;height:180px;object-fit:cover;}
+.industry-card-body{padding:20px;}
+.industry-card-body h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.industry-card-body .tag{font-size:12px;color:var(--text-light);margin-bottom:12px;}
+.industry-card-body a{font-size:13px;font-weight:600;color:var(--accent);}
+
+/* ===== WHY CHOOSE US ===== */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px;}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr;}}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px;}
+.why-card svg{color:var(--accent);}
+.why-card h4{font-size:16px;font-weight:700;color:var(--dk-blue);}
+.why-card p{font-size:14px;color:var(--text-mid);}
+.why-image{margin-top:40px;border-radius:var(--radius);overflow:hidden;}
+.why-image img{width:100%;max-height:380px;object-fit:cover;}
+
+/* ===== DELIVERABLES ===== */
+.deliv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:768px){.deliv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.deliv-grid{grid-template-columns:1fr;}}
+.deliv-card{padding:24px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:10px;}
+.deliv-card svg{color:var(--accent);}
+.deliv-card h3{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.deliv-card p{font-size:13px;color:var(--text-mid);}
+
+/* ===== STATS ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;}
+@media(max-width:600px){.stats-grid{grid-template-columns:1fr;}}
+.stat-card{text-align:center;}
+.stat-num{font-size:clamp(36px,5vw,60px);font-weight:900;color:#fff;margin-bottom:6px;}
+.stat-label{font-size:14px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:8px;}
+.stat-desc{font-size:13px;color:rgba(255,255,255,.65);}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr;}}
+.testimonial{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:32px;}
+.testimonial blockquote{font-size:16px;font-style:italic;color:rgba(255,255,255,.9);line-height:1.7;margin-bottom:16px;}
+.testimonial cite{font-size:12px;font-weight:700;letter-spacing:1px;color:#7da4d8;text-transform:uppercase;}
+
+/* ===== COVERAGE ===== */
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+@media(max-width:768px){.coverage-grid{grid-template-columns:repeat(2,1fr);}}
+.coverage-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;}
+.coverage-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.coverage-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin-top:32px;}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+.faq-item:first-child{padding-top:0;}
+.faq-q{font-size:16px;font-weight:700;color:var(--dk-blue);margin-bottom:10px;}
+.faq-a{font-size:15px;color:var(--text-mid);line-height:1.65;}
+
+/* ===== CTA BAND ===== */
+.cta-band{background:var(--accent);padding:60px 30px;text-align:center;}
+.cta-band h2{color:#fff;font-size:clamp(22px,3vw,32px);font-weight:800;margin-bottom:12px;}
+.cta-band p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:28px;}
+.btn-white{background:#fff;color:var(--accent)!important;padding:14px 30px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-white:hover{background:#e8edf8;text-decoration:none!important;}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--dk-blue);padding:40px 30px 24px;color:rgba(255,255,255,.6);font-size:13px;}
+.site-footer .inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+
+
+:root{
+  --blue:#1B3A5C;--blue-dk:#163a82;--blue-lt:#e8eef8;--blue-xlt:#f2f5fb;
+  --green:#2E8B57;--green-dk:#256b44;--green-lt:#ecfdf5;--green-mid:#d1fae5;
+  --steel:#1a2e42;--steel-dk:#0d1a26;
+  --text:#1E293B;--muted:#64748B;--border:#E2E8F0;--bg:#F7F9FC;--white:#fff;
+  --font:'Inter',system-ui,sans-serif;--r:10px;--shadow:0 2px 12px rgba(0,0,0,.08);
+}
+html {font-size:16px;scroll-behavior:smooth}
+body {font-family:var(--font);color:var(--text);line-height:1.65;background:#fff}
+
+/* REVIEW RIBBON */
+#warehouse-cleaning .rr {background:#fffbea;border-bottom:2px solid #e8c840;padding:10px 32px;display:flex;gap:14px;align-items:center;font-size:12px;flex-wrap:wrap}
+#warehouse-cleaning .rr-badge {background:var(--blue);color:#fff;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 9px;border-radius:4px}
+
+/* HEADER */
+#warehouse-cleaning .site-header {background:#fff;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+#warehouse-cleaning .hdr {max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;height:66px;gap:28px}
+#warehouse-cleaning .hdr-logo {display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+#warehouse-cleaning .hdr-mark {width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:#fff}
+#warehouse-cleaning .hdr-name strong {display:block;font-size:14px;font-weight:800;color:var(--text);line-height:1.2}
+#warehouse-cleaning .hdr-name span {font-size:10.5px;color:var(--muted)}
+#warehouse-cleaning .hdr-nav {display:flex;gap:2px;flex:1}
+#warehouse-cleaning .hdr-nav a {padding:7px 11px;text-decoration:none;color:var(--text);font-size:13px;font-weight:500;border-radius:6px;transition:.15s}
+#warehouse-cleaning .hdr-nav a:hover, #warehouse-cleaning .hdr-nav a[aria-current] {background:var(--bg);color:var(--blue)}
+#warehouse-cleaning .hdr-right {flex-shrink:0}
+#warehouse-cleaning .btn-green {background:var(--green);color:#fff;padding:9px 18px;font-size:13px;border-radius:7px;font-weight:600;text-decoration:none;transition:.15s}
+#warehouse-cleaning .btn-green:hover {background:var(--green-dk)}
+#warehouse-cleaning .btn-green-lg {background:var(--green);color:#fff;padding:13px 28px;font-size:15px;border-radius:7px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.15s}
+#warehouse-cleaning .btn-green-lg:hover {background:var(--green-dk)}
+#warehouse-cleaning .btn-outline-white {border:2px solid rgba(255,255,255,.5);color:#fff;padding:13px 28px;font-size:15px;background:transparent;border-radius:7px;font-weight:600;text-decoration:none;transition:.15s}
+#warehouse-cleaning .btn-outline-white:hover {background:rgba(255,255,255,.12)}
+
+/* HERO */
+#warehouse-cleaning .hero {background:linear-gradient(135deg,#0d1a26 0%,#1a2e42 50%,#1B3A5C 100%);padding:76px 0 64px;position:relative;overflow:hidden}
+#warehouse-cleaning .hero::before {content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.015) 80px,rgba(255,255,255,.015) 81px);pointer-events:none}
+#warehouse-cleaning .hero-inner {max-width:1100px;margin:0 auto;padding:0 32px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}
+#warehouse-cleaning .hero-eyebrow {font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#4ade80;margin-bottom:16px}
+#warehouse-cleaning .hero h1 {font-size:clamp(26px,3.8vw,46px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:20px;letter-spacing:-1px}
+#warehouse-cleaning .hero-sub {font-size:17px;color:rgba(255,255,255,.78);margin-bottom:32px;line-height:1.65}
+#warehouse-cleaning .hero-btns {display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+#warehouse-cleaning .hero-locs {display:flex;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+#warehouse-cleaning .hero-loc {font-size:12px;color:rgba(255,255,255,.6);font-weight:500;display:flex;align-items:center;gap:5px;padding-right:16px}
+#warehouse-cleaning .hero-loc::before {content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
+#warehouse-cleaning .hero-img-ph {background:rgba(255,255,255,.05);border:2px dashed rgba(255,255,255,.15);border-radius:12px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:32px;text-align:center}
+#warehouse-cleaning .hero-img-ph p {font-size:12px;color:rgba(255,255,255,.35);font-weight:600}
+#warehouse-cleaning .hero-img-ph small {font-size:11px;color:rgba(255,255,255,.2);font-family:monospace}
+
+/* USP BAR */
+#warehouse-cleaning .usp-bar {background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.05)}
+#warehouse-cleaning .usp-inner {max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr)}
+#warehouse-cleaning .usp-item {display:flex;align-items:center;gap:12px;padding:18px 20px;border-right:1px solid var(--border)}
+#warehouse-cleaning .usp-item:last-child {border-right:none}
+#warehouse-cleaning .usp-icon {width:40px;height:40px;background:var(--blue-xlt);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
+#warehouse-cleaning .usp-text strong {display:block;font-size:13px;font-weight:700;color:var(--text)}
+#warehouse-cleaning .usp-text span {font-size:11.5px;color:var(--muted)}
+
+/* SECTIONS */
+#warehouse-cleaning .section {padding:64px 0}
+#warehouse-cleaning .section-alt {background:var(--bg)}
+#warehouse-cleaning .section-dark {background:#0d1a26;color:#fff}
+#warehouse-cleaning .container {max-width:1100px;margin:0 auto;padding:0 32px}
+#warehouse-cleaning .section-label {font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--green);margin-bottom:8px}
+#warehouse-cleaning .section-label-white {color:#4ade80}
+#warehouse-cleaning .section-title {font-size:clamp(22px,2.5vw,32px);font-weight:800;color:var(--text);margin-bottom:14px;letter-spacing:-.3px;line-height:1.2}
+#warehouse-cleaning .section-title-white {color:#fff}
+#warehouse-cleaning .section-sub {font-size:16px;color:var(--muted);max-width:680px;line-height:1.65;margin-bottom:36px}
+#warehouse-cleaning .section-sub-white {color:rgba(255,255,255,.65)}
+
+/* TWO-COL INTRO */
+#warehouse-cleaning .two-col {display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+#warehouse-cleaning .prose p {color:var(--text);margin-bottom:16px;font-size:15.5px;line-height:1.8}
+#warehouse-cleaning .prose p:first-of-type {font-size:17px;color:#2d3748;font-weight:500}
+#warehouse-cleaning .prose a {color:var(--blue)}
+#warehouse-cleaning .img-ph {background:#eef0f5;border:2px dashed #c0c4d4;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:48px 32px;text-align:center;min-height:340px;color:#9aa3af}
+#warehouse-cleaning .img-ph p {font-size:13px;font-weight:600;color:var(--text)}
+#warehouse-cleaning .img-ph small {font-size:11px;color:var(--muted);font-family:monospace;background:rgba(31,76,161,.07);padding:3px 10px;border-radius:20px}
+
+/* RISK CARDS */
+#warehouse-cleaning .risk-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+#warehouse-cleaning .risk-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:28px;border-left:4px solid #dc2626}
+#warehouse-cleaning .risk-header {display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
+#warehouse-cleaning .risk-icon {width:40px;height:40px;background:#fef2f2;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#dc2626}
+#warehouse-cleaning .risk-title {font-size:15px;font-weight:700;color:var(--text);line-height:1.3}
+#warehouse-cleaning .risk-desc {font-size:13.5px;color:var(--text);line-height:1.7;margin-bottom:12px}
+#warehouse-cleaning .risk-solve {font-size:13px;color:var(--green-dk);background:var(--green-lt);border:1px solid var(--green-mid);border-radius:6px;padding:10px 14px}
+#warehouse-cleaning .risk-solve strong {display:block;font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+
+/* FACILITY TYPE CARDS */
+#warehouse-cleaning .facility-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+#warehouse-cleaning .facility-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:26px;border-top:3px solid var(--blue);transition:.2s}
+#warehouse-cleaning .facility-card:hover {box-shadow:var(--shadow);transform:translateY(-2px);border-top-color:var(--green)}
+#warehouse-cleaning .fac-icon {width:44px;height:44px;background:var(--blue-xlt);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+#warehouse-cleaning .fac-title {font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+#warehouse-cleaning .fac-desc {font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+#warehouse-cleaning .fac-items {list-style:none;padding:0}
+#warehouse-cleaning .fac-items li {font-size:12.5px;color:var(--text);padding:3px 0 3px 14px;position:relative;border-bottom:1px solid var(--border)}
+#warehouse-cleaning .fac-items li:last-child {border-bottom:none}
+#warehouse-cleaning .fac-items li::before {content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--green)}
+
+/* SERVICE CARDS */
+#warehouse-cleaning .svc-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+#warehouse-cleaning .svc-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:.2s}
+#warehouse-cleaning .svc-card:hover {box-shadow:var(--shadow);transform:translateY(-2px)}
+#warehouse-cleaning .svc-icon {width:44px;height:44px;background:var(--blue-xlt);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+#warehouse-cleaning .svc-title {font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+#warehouse-cleaning .svc-desc {font-size:13.5px;color:var(--muted);line-height:1.65}
+#warehouse-cleaning .svc-badge {display:inline-flex;font-size:11px;font-weight:600;color:var(--green);background:var(--green-lt);border:1px solid var(--green-mid);padding:3px 10px;border-radius:20px;margin-top:10px}
+
+/* FLOOR PROGRAM BLOCK */
+#warehouse-cleaning .floor-prog {background:var(--blue-xlt);border:1px solid rgba(27,58,92,.15);border-radius:var(--r);padding:36px;margin-top:40px}
+#warehouse-cleaning .fp-header {display:flex;align-items:flex-start;gap:20px;margin-bottom:24px}
+#warehouse-cleaning .fp-icon {width:52px;height:52px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+#warehouse-cleaning .fp-title {font-size:20px;font-weight:800;color:var(--blue);margin-bottom:6px}
+#warehouse-cleaning .fp-sub {font-size:14px;color:var(--muted)}
+#warehouse-cleaning .fp-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+#warehouse-cleaning .fp-step {background:#fff;border-radius:8px;padding:18px;border:1px solid var(--border)}
+#warehouse-cleaning .fp-step-num {font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+#warehouse-cleaning .fp-step-title {font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+#warehouse-cleaning .fp-step-desc {font-size:12.5px;color:var(--muted);line-height:1.5}
+
+/* DIFFERENTIATORS */
+#warehouse-cleaning .diff-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+#warehouse-cleaning .diff-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:28px}
+#warehouse-cleaning .diff-icon {width:44px;height:44px;background:var(--blue-xlt);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+#warehouse-cleaning .diff-title {font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+#warehouse-cleaning .diff-desc {font-size:13.5px;color:var(--muted);line-height:1.7}
+#warehouse-cleaning .diff-desc a {color:var(--blue)}
+
+/* WHAT YOU RECEIVE */
+#warehouse-cleaning .doc-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+#warehouse-cleaning .doc-card {background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px}
+#warehouse-cleaning .doc-icon {width:40px;height:40px;background:rgba(74,222,128,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:#4ade80}
+#warehouse-cleaning .doc-title {font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
+#warehouse-cleaning .doc-desc {font-size:13px;color:rgba(255,255,255,.55);line-height:1.5}
+
+/* PROJECT CARDS */
+#warehouse-cleaning .projects-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+#warehouse-cleaning .project-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:.2s}
+#warehouse-cleaning .project-card:hover {box-shadow:0 8px 28px rgba(27,58,92,.14);transform:translateY(-3px)}
+#warehouse-cleaning .ba-wrap {display:grid;grid-template-columns:1fr 1fr}
+#warehouse-cleaning .ba-ph {min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;position:relative}
+#warehouse-cleaning .ba-ph.before {background:#f1f0ef;border-right:2px solid #fff}
+#warehouse-cleaning .ba-ph.after {background:#ecfdf5}
+#warehouse-cleaning .ba-label {font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;position:absolute;top:8px;left:50%;transform:translateX(-50%);padding:2px 10px;border-radius:20px;white-space:nowrap}
+#warehouse-cleaning .ba-ph.before .ba-label {background:#e5e7eb;color:#6b7280}
+#warehouse-cleaning .ba-ph.after .ba-label {background:var(--green-mid);color:var(--green-dk)}
+#warehouse-cleaning .ba-ph p {font-size:11px;color:var(--muted);margin-top:16px}
+#warehouse-cleaning .ba-ph small {font-size:10px;font-family:monospace;color:#b0b8c4}
+#warehouse-cleaning .project-body {padding:18px 20px}
+#warehouse-cleaning .project-type {font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--green);margin-bottom:5px}
+#warehouse-cleaning .project-title {font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+#warehouse-cleaning .project-desc {font-size:13px;color:var(--muted);line-height:1.5}
+#warehouse-cleaning .project-meta {display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+#warehouse-cleaning .project-tag {font-size:11px;background:var(--bg);color:var(--text);padding:3px 9px;border-radius:20px;border:1px solid var(--border);font-weight:500}
+
+/* FAQ */
+#warehouse-cleaning .faq-list {margin-top:32px}
+#warehouse-cleaning .faq-item {border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
+#warehouse-cleaning .faq-trigger {width:100%;padding:18px 22px;font-size:15px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;border:none;font-family:var(--font);text-align:left;transition:.15s}
+#warehouse-cleaning .faq-trigger:hover {background:var(--bg)}
+#warehouse-cleaning .faq-trigger:focus-visible {outline:3px solid var(--blue);outline-offset:-3px}
+#warehouse-cleaning .faq-chevron {width:24px;height:24px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s,background .2s}
+#warehouse-cleaning .faq-item[aria-expanded="true"] .faq-chevron {transform:rotate(180deg);background:var(--blue)}
+#warehouse-cleaning .faq-chevron svg {width:12px;height:12px;fill:var(--blue);transition:fill .2s}
+#warehouse-cleaning .faq-item[aria-expanded="true"] .faq-chevron svg {fill:#fff}
+#warehouse-cleaning .faq-panel {max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+#warehouse-cleaning .faq-item[aria-expanded="true"] .faq-panel {max-height:500px}
+#warehouse-cleaning .faq-answer {padding:0 22px 18px;font-size:14.5px;color:var(--text);line-height:1.75;background:#fff}
+#warehouse-cleaning .faq-answer a {color:var(--blue)}
+
+/* CTA */
+#warehouse-cleaning .cta-section {background:linear-gradient(135deg,#0d1a26 0%,#1B3A5C 100%);padding:72px 32px;text-align:center}
+#warehouse-cleaning .cta-section h2 {font-size:clamp(22px,3vw,36px);font-weight:800;color:#fff;margin-bottom:14px;max-width:700px;margin-left:auto;margin-right:auto}
+#warehouse-cleaning .cta-section p {font-size:17px;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto}
+#warehouse-cleaning .cta-btns {display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+#warehouse-cleaning .footer {background:#0d1a26;padding:44px 32px 24px}
+#warehouse-cleaning .footer-inner {max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+#warehouse-cleaning .footer-col h5 {color:#fff;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;font-weight:700}
+#warehouse-cleaning .footer-col ul {list-style:none}
+#warehouse-cleaning .footer-col ul li {padding:4px 0;font-size:12.5px;color:rgba(255,255,255,.4)}
+#warehouse-cleaning .footer-bottom {max-width:1100px;margin:0 auto;padding:16px 0 0;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.2)}
+
+@media(max-width:900px){
+  #warehouse-cleaning .hero-inner, #warehouse-cleaning .two-col {grid-template-columns:1fr}.hero-img-ph{display:none}
+  #warehouse-cleaning .usp-inner, #warehouse-cleaning .svc-grid, #warehouse-cleaning .facility-grid, #warehouse-cleaning .doc-grid {grid-template-columns:repeat(2,1fr)}
+  #warehouse-cleaning .risk-grid, #warehouse-cleaning .fp-grid, #warehouse-cleaning .diff-grid {grid-template-columns:1fr}
+  #warehouse-cleaning .projects-grid {grid-template-columns:1fr}
+  #warehouse-cleaning .hdr-nav {display:none}
+}
+@media(max-width:640px){.svc-grid,.facility-grid,.doc-grid,.usp-inner{grid-template-columns:1fr}.container{padding:0 20px}}
+
+</style>
+</head>
+<body>
+<!-- SEO METADATA CARD -->
+<div style="background:#fff3cd;border:2px solid #f0a500;border-radius:8px;padding:20px 24px;margin:24px 30px 0;max-width:900px;font-family:Inter,sans-serif;">
+  <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7a5000;margin-bottom:12px;">&#9881;&#65039; SEO Metadata &mdash; Day Porter Services Page</p>
+  <table style="width:100%;border-collapse:collapse;font-size:14px;">
+    <tr style="border-bottom:1px solid #f0d080;">
+      <td style="padding:8px 12px 8px 0;font-weight:700;color:#5a3e00;width:180px;">Title tag</td>
+      <td style="padding:8px 0;color:#1a1a2e;">Day Porter Services NYC | Supervisor-Led. Real-Time. Documented. | Advantage Cleaning</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f0d080;">
+      <td style="padding:8px 12px 8px 0;font-weight:700;color:#5a3e00;">Meta description</td>
+      <td style="padding:8px 0;color:#1a1a2e;">Day porter services for NYC commercial facilities. Supervisor-led teams, real-time QA scoring, task tracking, and weekly reporting. No follow-up required. 212-929-7872.</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f0d080;">
+      <td style="padding:8px 12px 8px 0;font-weight:700;color:#5a3e00;">H1</td>
+      <td style="padding:8px 0;color:#1a1a2e;">Day Porter Services in New York City</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f0d080;">
+      <td style="padding:8px 12px 8px 0;font-weight:700;color:#5a3e00;">Primary keyword</td>
+      <td style="padding:8px 0;color:#1a1a2e;">day porter services NYC</td>
+    </tr>
+    <tr style="border-bottom:1px solid #f0d080;">
+      <td style="padding:8px 12px 8px 0;font-weight:700;color:#5a3e00;">Secondary keywords</td>
+      <td style="padding:8px 0;color:#1a1a2e;">commercial day porter NYC &middot; day porter company New York &middot; day porter services office buildings NYC</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px 8px 0;font-weight:700;color:#5a3e00;">Schema types</td>
+      <td style="padding:8px 0;color:#1a1a2e;">Service &middot; FAQPage &middot; LocalBusiness</td>
+    </tr>
+  </table>
+</div>
+
+<!-- NAV -->
+
+
+<!-- SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Day Porter Services NYC",
+      "description": "Supervisor-led day porter services for NYC commercial facilities. Real-time QA scoring, app-based task tracking, and weekly reporting. Serving offices, hotels, retail, schools, and high-traffic commercial buildings.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Advantage Cleaning LLC",
+        "telephone": "212-929-7872",
+        "url": "https://advantagecleaning.nyc",
+        "areaServed": ["Manhattan","Brooklyn","Queens","The Bronx","Staten Island","Jersey City","Newark","Stamford"]
+      },
+      "serviceType": "Day Porter Services",
+      "areaServed": "New York City, NJ, CT"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is a day porter service?","acceptedAnswer":{"@type":"Answer","text":"A day porter is a dedicated on-site cleaning technician who maintains your facility during business hours. Unlike overnight janitorial, a day porter operates while your building is occupied &mdash; managing lobbies, restrooms, spill response, consumable restocking, and common area upkeep in real time."}},
+        {"@type":"Question","name":"What is the difference between a day porter and a janitor?","acceptedAnswer":{"@type":"Answer","text":"A janitor typically works overnight when the building is empty, handling deep cleaning and floor care. A day porter works during business hours, maintaining standards in real time as the building is occupied &mdash; responding to spills, restocking consumables, and keeping high-traffic areas presentable throughout the day."}},
+        {"@type":"Question","name":"How is Advantage Cleaning's day porter program different from standard porter services?","acceptedAnswer":{"@type":"Answer","text":"Most providers send a porter and rely on the FM to manage quality. Advantage Cleaning operates a supervised program: a named supervisor oversees task completion, every zone is scored on a 1&ndash;5 QA scale, tasks are logged in real time, and the FM receives a weekly report. The FM does not manage the porter. The system does."}},
+        {"@type":"Question","name":"Can day porter services be combined with overnight janitorial?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most clients run both. The overnight crew handles deep cleaning, floor care, and full restroom servicing. The day porter maintains standards during business hours. One programme, one supervisor, one QA system across both."}},
+        {"@type":"Question","name":"What documentation does the FM receive from a day porter programme?","acceptedAnswer":{"@type":"Answer","text":"Weekly QA reports with zone-by-zone scores, task completion logs, issues flagged and resolved, and consumable usage summaries. Inspection records are available on demand."}},
+        {"@type":"Question","name":"What types of facilities use day porter services in NYC?","acceptedAnswer":{"@type":"Answer","text":"Office buildings, corporate HQs, hotels, retail and commercial spaces, museums and cultural institutions, schools, healthcare and medical offices, and multi-tenant commercial buildings. Any facility with high foot traffic during business hours benefits from a day porter programme."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- HERO -->
+<section class="hero" style="background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');">
+  <div class="inner">
+    <p class="hero-eyebrow">Day Porter Services &mdash; NYC &middot; NJ &middot; CT</p>
+    <h1>Day Porter Services<br>in <mark>New York City</mark></h1>
+    <p class="hero-tagline">Most day porter programs are a person with a mop. Ours is a supervised, tracked, reported facility control system &mdash; running during your business hours, without you managing it.</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Supervisor-Led Teams</span>
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-Time QA Scoring</span>
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly Reports</span>
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All 5 NYC Boroughs</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">Request a Day Porter Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- OPENING -->
+<section style="background:#fff;padding:72px 30px;">
+  <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div>
+      <p style="font-size:19px;line-height:1.65;color:#1a1a2e;font-weight:500;margin-bottom:16px;">A building that looks right at 7am does not stay that way.</p>
+      <p style="font-size:16px;color:#444;margin-bottom:14px;">Lobbies accumulate. Restrooms degrade. Spills happen. Trash fills. Elevator banks show it first. The FM feels it in the calls from tenants, the complaints from building ownership, the inspection walkthrough that catches what the overnight crew missed.</p>
+      <p style="font-size:16px;color:#444;">Day porter service exists to manage that gap &mdash; during business hours, in real time, without the FM becoming the relay point between what&rsquo;s wrong and what gets fixed. The difference between a porter and a porter programme is the system behind it. Most companies send one. We operate the other.</p>
+    </div>
+    <div style="background:#f0f2f5;border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#8a9ab5;font-size:13px;font-weight:500;">Image placeholder</div>
+  </div>
+</section>
+
+<!-- OUTCOME / PAIN GRID -->
+<section style="padding:64px 30px;background:#fff;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:36px;">What a Supervised Day Porter Programme Delivers</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div style="background:#f0f8f0;border:1px solid #c3e6c3;border-radius:8px;padding:28px;">
+        <h3 style="color:#2d7a27;font-size:16px;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;">What a supervised programme delivers</h3>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>Lobbies and restrooms maintained to standard throughout the day</strong> &mdash; not just at the start of the shift</li>
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>Spills and immediate issues resolved</strong> without a call to the FM &mdash; the porter identifies and handles</li>
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>Consumables monitored and restocked</strong> before they run out, not after a tenant complaint</li>
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>Tenant and visitor impressions managed</strong> during peak hours, not cleaned up afterward</li>
+          <li style="padding:10px 0;font-size:15px;color:#1a1a2e;"><strong>Weekly QA reports</strong> &mdash; zone-by-zone scores &mdash; so the FM has documented evidence of daily performance</li>
+        </ul>
+      </div>
+      <div style="background:#fff5f5;border:1px solid #f5c6c6;border-radius:8px;padding:28px;">
+        <h3 style="color:#c0392b;font-size:16px;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;">What an unsupervised porter costs</h3>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">FM becomes quality control &mdash; fielding tenant complaints and chasing the porter to fix things</li>
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">Standards drift over time with no accountability mechanism</li>
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">No documentation when building ownership asks how the porter programme is performing</li>
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">Visible deterioration during peak hours that the overnight clean cannot undo</li>
+          <li style="padding:10px 0;font-size:15px;color:#1a1a2e;">Turnover and inconsistency &mdash; no system means no repeatability</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THE PORTER COVERS -->
+<section style="padding:64px 30px;background:#f0f2f5;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p class="section-eyebrow">What the Programme Covers</p>
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:12px;">Real-Time Facility Upkeep During Business Hours</h2>
+    <p style="font-size:16px;color:#444;margin-bottom:40px;max-width:720px;">Scope is tailored to your facility. These are the standard coverage areas &mdash; frequency and priority adjusted to your building&rsquo;s occupancy pattern and traffic volume.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Lobbies &amp; Entrances</h3>
+        <p style="font-size:14px;color:#555;margin:0;">First impressions happen continuously. Porter monitors and maintains lobby floors, glass, signage, and seating throughout the day &mdash; not once in the morning.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Restroom Monitoring &amp; Servicing</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Scheduled checks throughout the shift. Consumables restocked before they run out. A restroom that passes a morning inspection can fail by 11am in a high-traffic building.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Elevator Banks &amp; Common Areas</h3>
+        <p style="font-size:14px;color:#555;margin:0;">High-touch, high-visibility. Elevator interiors, button panels, and surrounding corridors maintained on a defined check schedule throughout the day.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Spill Response &amp; Immediate Cleanup</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Porter responds to spills, tracked debris, and urgent messes without being dispatched by the FM. Resolved on-site, logged, reported.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Conference Room Turnovers</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Between meetings &mdash; surfaces wiped, chairs reset, whiteboard cleared, trash removed. Ready for the next group without FM coordination.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Consumables &amp; Supply Monitoring</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Paper products, soap, sanitiser &mdash; tracked and restocked as part of the shift. Not as a separate request.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Floor Touch-Ups</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Spot mopping, carpet spot treatment, entrance mat maintenance. Keeps floor condition between overnight cleaning cycles without waiting for the next scheduled service.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Waste Management During Hours</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Trash and recycling removed from high-use areas throughout the day &mdash; not left until the overnight shift.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:24px;">
+        <h3 style="font-size:16px;color:#0b2545;margin-bottom:10px;">Kitchen &amp; Breakroom Monitoring</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Counters, sinks, appliances, and seating kept presentable during the day. High-use areas that deteriorate fast in occupied buildings.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE SYSTEM -->
+<section style="padding:72px 30px;background:#0b2545;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7da4d8;margin-bottom:12px;">Why Ours Is Different</p>
+    <h2 style="font-size:clamp(22px,3vw,36px);color:#fff;margin-bottom:16px;">Not a Porter. A Programme.</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,.8);max-width:680px;margin-bottom:48px;">Every other day porter provider in NYC sends staff. We operate a system. None of the competitors ranking on this keyword &mdash; Blue Chip, Greenhouse, Liberty, POC &mdash; communicate what happens after the porter shows up. We do.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px;">
+        <h3 style="color:#7ee87a;font-size:17px;font-weight:700;margin-bottom:12px;">Supervisor-Led, Not Self-Managed</h3>
+        <p style="color:rgba(255,255,255,.8);font-size:15px;">A named supervisor oversees the day porter &mdash; not remotely, but with a defined check-in and verification schedule. Tasks are assigned, completed, and verified. Not self-reported. The FM&rsquo;s contact is the supervisor, not a call centre.</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px;">
+        <h3 style="color:#7ee87a;font-size:17px;font-weight:700;margin-bottom:12px;">Real-Time QA Scoring</h3>
+        <p style="color:rgba(255,255,255,.8);font-size:15px;">Every zone covered by the porter is scored on our 1&ndash;5 Quality Checklist. Scores are logged. The FM sees the data &mdash; in a weekly report &mdash; not just the outcome. When a score drops, we fix it before the FM is aware of it.</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px;">
+        <h3 style="color:#7ee87a;font-size:17px;font-weight:700;margin-bottom:12px;">Task Tracking &amp; Photo Verification</h3>
+        <p style="color:rgba(255,255,255,.8);font-size:15px;">Task completion is logged in real time. Spill response, restroom checks, lobby rounds &mdash; each logged with timestamp and status. If a task wasn&rsquo;t completed, it shows. That&rsquo;s the accountability mechanism most porter programmes don&rsquo;t have.</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px;">
+        <h3 style="color:#7ee87a;font-size:17px;font-weight:700;margin-bottom:12px;">Weekly Reporting</h3>
+        <p style="color:rgba(255,255,255,.8);font-size:15px;">Every week, the FM receives a summary: zones covered, QA scores per area, issues flagged and resolved, consumable usage. The kind of documentation that answers a building ownership question or a tenant complaint &mdash; without the FM having to ask for it.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section style="padding:64px 30px;background:#f0f2f5;">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <h2 style="font-size:clamp(20px,2.5vw,28px);color:#0b2545;margin-bottom:36px;">What Facility Managers Say</h2>
+    <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:40px;text-align:left;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="#1e4ca1" style="margin-bottom:16px;opacity:.3;"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+      <p style="font-size:17px;line-height:1.7;color:#1a1a2e;font-style:italic;margin-bottom:20px;">&ldquo;In my experience, Advantage Cleaning is by far the best cleaning company I have ever worked with. They are a dedicated team that show up on time and when they are in the attraction, they pay attention to all the little details. They do such a great job here that if given the choice to have the cleaning crew become an in-house internal team, I would refuse because of how good a job they do.&rdquo;</p>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:44px;height:44px;background:#0b2545;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">FM</div>
+        <div>
+          <strong style="color:#0b2545;">Facilities Manager</strong><br>
+          <span style="font-size:14px;color:#555;">Major NYC visitor attraction &mdash; one of Manhattan&rsquo;s highest foot-traffic public venues, over 20 years of experience managing cleaning vendors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES WE SERVE -->
+<section style="padding:56px 30px;background:#fff;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p class="section-eyebrow">Facilities We Serve</p>
+    <h2 style="font-size:clamp(20px,2.5vw,28px);color:#0b2545;margin-bottom:28px;">Day Porter Services Across NYC Commercial Facilities</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Office Buildings &amp; Corporate HQs</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Hotels &amp; Hospitality</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Retail &amp; Commercial Spaces</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Museums &amp; Cultural Institutions</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Schools &amp; Educational Facilities</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Healthcare &amp; Medical Offices</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Multi-Tenant Commercial Buildings</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Industrial &amp; Warehouse Facilities</span>
+    </div>
+    <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;">
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Manhattan</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Brooklyn</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Queens</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">The Bronx</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Staten Island</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Jersey City, NJ</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Newark, NJ</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:7px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#444;">Stamford, CT</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:72px 30px;background:#f0f2f5;">
+  <div style="max-width:800px;margin:0 auto;">
+    <p class="section-eyebrow">FAQ</p>
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:40px;">Questions Facility Managers Ask</h2>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What is a day porter service?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">A day porter is a dedicated on-site cleaning technician who maintains your facility during business hours &mdash; lobbies, restrooms, common areas, spill response, consumable restocking. Unlike overnight janitorial, a day porter operates while your building is occupied, addressing real-time conditions as they arise throughout the day.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What is the difference between a day porter and a janitor?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">A janitor typically works overnight when the building is empty, handling deep cleaning, floor care, and full restroom servicing. A day porter works during business hours, maintaining standards in real time as the building is occupied &mdash; responding to spills, restocking consumables, and keeping high-traffic areas presentable throughout the day. The two programmes work best together.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">How is Advantage Cleaning&rsquo;s programme different from a standard porter service?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Most providers send a porter and rely on the FM to manage quality. We operate a supervised programme: a named supervisor oversees task completion, every zone is scored on a 1&ndash;5 QA scale, tasks are logged in real time, and the FM receives a weekly report. The FM does not manage the porter. The system does.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">Can day porter services be combined with an overnight janitorial programme?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Yes &mdash; and most of our clients run both. The overnight crew handles deep cleaning, floor care, and full restroom servicing. The day porter maintains standards during business hours. One programme, one supervisor, one QA system across both.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What documentation does the FM receive?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Weekly QA reports with zone-by-zone scores, task completion logs, issues flagged and resolved, and consumable usage summaries. Inspection records are available on demand.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What types of facilities use day porter services?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Office buildings, corporate HQs, hotels, retail and commercial spaces, museums and cultural institutions, schools, healthcare and medical offices, and multi-tenant commercial buildings. Any facility with high foot traffic during business hours benefits from a day porter programme.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What hours does a day porter work?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Shift length and timing are agreed based on your building&rsquo;s occupancy schedule. Typical day porter shifts run 4&ndash;8 hours during peak business hours. We build the schedule around your facility &mdash; not a standard template.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>A Building That Looks Right at 7am Shouldn&rsquo;t Deteriorate by Noon</h2>
+  <p>Request a Day Porter Assessment &mdash; we&rsquo;ll walk your facility and deliver a written scope within 48 hours. Serving NYC, NJ &amp; CT.</p>
+  <a href="#" class="btn-white">Request a Day Porter Assessment</a>
+  <p style="margin-top:12px;font-size:14px;opacity:.8;">Call 212-929-7872 &middot; info@advantagecleaningllc.net &middot; advantagecleaning.nyc</p>
+</div>
+</div><!-- /day-porter page -->
+
+<!-- PLACEHOLDER PAGE -->
+
+<!-- WAREHOUSE CSS (scoped) -->
+
+
+<!-- ==================== WAREHOUSE CLEANING PAGE ==================== -->
+</body>
+</html>

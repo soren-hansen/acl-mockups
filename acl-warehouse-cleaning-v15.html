@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warehouse Cleaning Services NYC | Advantage Cleaning LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#1e4ca1;
+  --accent-green:#44953e;
+  --accent-light:#e8edf8;
+  --base:#f0f2f5;
+  --base-2:#fff;
+  --base-3:#1e4ca1;
+  --base-4:#1e4ca1;
+  --dk-blue:#0b2545;
+  --text:#1a1a2e;
+  --text-mid:#444;
+  --text-light:#666;
+  --border:#dde3f0;
+  --green-badge-bg:rgba(142,231,136,0.31);
+  --green-badge-color:#469240;
+  --max-w:1200px;
+  --radius:8px;
+  /* warehouse aliases — same values, different names used in warehouse components */
+  --blue:#1e4ca1;--blue-dk:#163d85;--blue-lt:#e8edf8;--blue-xlt:#f0f4fc;
+  --green:#44953e;--green-dk:#357a2f;--green-lt:#ecfdf5;--green-mid:#d1fae5;
+  --steel:#0b2545;--steel-dk:#060f18;
+  --muted:#444;--bg:#f0f2f5;--white:#fff;
+  --font:'Inter',system-ui,sans-serif;--r:8px;--shadow:0 2px 12px rgba(0,0,0,.08);
+}
+html {font-size:16px;scroll-behavior:smooth}
+body {font-family:var(--font);color:var(--text);line-height:1.65;background:#fff}
+
+/* REVIEW RIBBON */
+.rr {background:#fffbea;border-bottom:2px solid #e8c840;padding:10px 32px;display:flex;gap:14px;align-items:center;font-size:12px;flex-wrap:wrap}
+.rr-badge {background:var(--blue);color:#fff;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 9px;border-radius:4px}
+
+/* HEADER */
+.site-header {background:#fff;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.hdr {max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;height:66px;gap:28px}
+.hdr-logo {display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+.hdr-mark {width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:#fff}
+.hdr-name strong {display:block;font-size:14px;font-weight:800;color:var(--text);line-height:1.2}
+.hdr-name span {font-size:10.5px;color:var(--muted)}
+.hdr-nav {display:flex;gap:2px;flex:1}
+.hdr-nav a {padding:7px 11px;text-decoration:none;color:var(--text);font-size:13px;font-weight:500;border-radius:6px;transition:.15s}
+.hdr-nav a:hover, .hdr-nav a[aria-current] {background:var(--bg);color:var(--blue)}
+.hdr-right {flex-shrink:0}
+.btn-green {background:var(--green);color:#fff;padding:9px 18px;font-size:13px;border-radius:7px;font-weight:600;text-decoration:none;transition:.15s}
+.btn-green:hover {background:var(--green-dk)}
+.btn-green-lg {background:var(--green);color:#fff;padding:13px 28px;font-size:15px;border-radius:7px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.15s}
+.btn-green-lg:hover {background:var(--green-dk)}
+.btn-outline-white {border:2px solid rgba(255,255,255,.5);color:#fff;padding:13px 28px;font-size:15px;background:transparent;border-radius:7px;font-weight:600;text-decoration:none;transition:.15s}
+.btn-outline-white:hover {background:rgba(255,255,255,.12)}
+
+/* HERO */
+.hero {background:linear-gradient(135deg,#060f18 0%,#0b2545 50%,#1e4ca1 100%);padding:76px 0 64px;position:relative;overflow:hidden}
+.hero::before {content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.015) 80px,rgba(255,255,255,.015) 81px);pointer-events:none}
+.hero-inner {max-width:1100px;margin:0 auto;padding:0 32px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}
+.hero-eyebrow {font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#4ade80;margin-bottom:16px}
+.hero h1 {font-size:clamp(26px,3.8vw,46px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:20px;letter-spacing:-1px}
+.hero-sub {font-size:17px;color:rgba(255,255,255,.92);margin-bottom:32px;line-height:1.65}
+.hero-btns {display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero-locs {display:flex;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.hero-loc {font-size:12px;color:rgba(255,255,255,.82);font-weight:500;display:flex;align-items:center;gap:5px;padding-right:16px}
+.hero-loc::before {content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
+.hero-img-ph {background:rgba(255,255,255,.05);border:2px dashed rgba(255,255,255,.15);border-radius:12px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:32px;text-align:center}
+.hero-img-ph p {font-size:12px;color:rgba(255,255,255,.35);font-weight:600}
+.hero-img-ph small {font-size:11px;color:rgba(255,255,255,.2);font-family:monospace}
+
+/* USP BAR */
+.usp-bar {background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.usp-inner {max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr)}
+.usp-item {display:flex;align-items:center;gap:12px;padding:18px 20px;border-right:1px solid var(--border)}
+.usp-item:last-child {border-right:none}
+.usp-icon {width:40px;height:40px;background:var(--blue-xlt);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
+.usp-text strong {display:block;font-size:13px;font-weight:700;color:var(--text)}
+.usp-text span {font-size:11.5px;color:var(--muted)}
+
+/* SECTIONS */
+.section {padding:64px 0}
+.section-alt {background:var(--bg)}
+.section-dark {background:#0d1a26;color:#fff}
+.container {max-width:1100px;margin:0 auto;padding:0 32px}
+.section-label {font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--green);margin-bottom:8px}
+.section-label-white {color:#4ade80}
+.section-title {font-size:clamp(22px,2.5vw,32px);font-weight:800;color:var(--text);margin-bottom:14px;letter-spacing:-.3px;line-height:1.2}
+.section-title-white {color:#fff}
+.section-sub {font-size:16px;color:var(--muted);max-width:680px;line-height:1.65;margin-bottom:36px}
+.section-sub-white {color:rgba(255,255,255,.65)}
+
+/* TWO-COL INTRO */
+.two-col {display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.prose p {color:var(--text);margin-bottom:16px;font-size:15.5px;line-height:1.8}
+.prose p:first-of-type {font-size:17px;color:#2d3748;font-weight:500}
+.prose a {color:var(--blue)}
+.img-ph {background:#eef0f5;border:2px dashed #c0c4d4;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:48px 32px;text-align:center;min-height:340px;color:#9aa3af}
+.img-ph p {font-size:13px;font-weight:600;color:var(--text)}
+.img-ph small {font-size:11px;color:var(--muted);font-family:monospace;background:rgba(31,76,161,.07);padding:3px 10px;border-radius:20px}
+
+/* RISK CARDS */
+.risk-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+.risk-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:28px;border-left:4px solid #dc2626}
+.risk-header {display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
+.risk-icon {width:40px;height:40px;background:#fef2f2;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#dc2626}
+.risk-title {font-size:15px;font-weight:700;color:var(--text);line-height:1.3}
+.risk-desc {font-size:13.5px;color:var(--text);line-height:1.7;margin-bottom:12px}
+.risk-solve {font-size:13px;color:var(--green-dk);background:var(--green-lt);border:1px solid var(--green-mid);border-radius:6px;padding:10px 14px}
+.risk-solve strong {display:block;font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+
+/* FACILITY TYPE CARDS */
+.facility-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.facility-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:26px;border-top:3px solid var(--blue);transition:.2s}
+.facility-card:hover {box-shadow:var(--shadow);transform:translateY(-2px);border-top-color:var(--green)}
+.fac-icon {width:44px;height:44px;background:var(--blue-xlt);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+.fac-title {font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.fac-desc {font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.fac-items {list-style:none;padding:0}
+.fac-items li {font-size:12.5px;color:var(--text);padding:3px 0 3px 14px;position:relative;border-bottom:1px solid var(--border)}
+.fac-items li:last-child {border-bottom:none}
+.fac-items li::before {content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--green)}
+
+/* SERVICE CARDS */
+.svc-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.svc-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:.2s}
+.svc-card:hover {box-shadow:var(--shadow);transform:translateY(-2px)}
+.svc-icon {width:44px;height:44px;background:var(--blue-xlt);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+.svc-title {font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.svc-desc {font-size:13.5px;color:var(--muted);line-height:1.65}
+.svc-badge {display:inline-flex;font-size:11px;font-weight:600;color:var(--green);background:var(--green-lt);border:1px solid var(--green-mid);padding:3px 10px;border-radius:20px;margin-top:10px}
+
+/* FLOOR PROGRAM BLOCK */
+.floor-prog {background:var(--blue-xlt);border:1px solid rgba(27,58,92,.15);border-radius:var(--r);padding:36px;margin-top:40px}
+.fp-header {display:flex;align-items:flex-start;gap:20px;margin-bottom:24px}
+.fp-icon {width:52px;height:52px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+.fp-title {font-size:20px;font-weight:800;color:var(--blue);margin-bottom:6px}
+.fp-sub {font-size:14px;color:var(--muted)}
+.fp-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fp-step {background:#fff;border-radius:8px;padding:18px;border:1px solid var(--border)}
+.fp-step-num {font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.fp-step-title {font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+.fp-step-desc {font-size:12.5px;color:var(--muted);line-height:1.5}
+
+/* DIFFERENTIATORS */
+.diff-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+.diff-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.diff-icon {width:44px;height:44px;background:var(--blue-xlt);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+.diff-title {font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.diff-desc {font-size:13.5px;color:var(--muted);line-height:1.7}
+.diff-desc a {color:var(--blue)}
+
+/* WHAT YOU RECEIVE */
+.doc-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.doc-card {background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px}
+.doc-icon {width:40px;height:40px;background:rgba(74,222,128,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:#4ade80}
+.doc-title {font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
+.doc-desc {font-size:13px;color:rgba(255,255,255,.55);line-height:1.5}
+
+/* PROJECT CARDS */
+.projects-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.project-card {background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:.2s}
+.project-card:hover {box-shadow:0 8px 28px rgba(27,58,92,.14);transform:translateY(-3px)}
+.ba-wrap {display:grid;grid-template-columns:1fr 1fr}
+.ba-ph {min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;position:relative}
+.ba-ph.before {background:#f1f0ef;border-right:2px solid #fff}
+.ba-ph.after {background:#ecfdf5}
+.ba-label {font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;position:absolute;top:8px;left:50%;transform:translateX(-50%);padding:2px 10px;border-radius:20px;white-space:nowrap}
+.ba-ph.before .ba-label {background:#e5e7eb;color:#6b7280}
+.ba-ph.after .ba-label {background:var(--green-mid);color:var(--green-dk)}
+.ba-ph p {font-size:11px;color:var(--muted);margin-top:16px}
+.ba-ph small {font-size:10px;font-family:monospace;color:#b0b8c4}
+.project-body {padding:18px 20px}
+.project-type {font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--green);margin-bottom:5px}
+.project-title {font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+.project-desc {font-size:13px;color:var(--muted);line-height:1.5}
+.project-meta {display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.project-tag {font-size:11px;background:var(--bg);color:var(--text);padding:3px 9px;border-radius:20px;border:1px solid var(--border);font-weight:500}
+
+/* FAQ */
+.faq-list {margin-top:32px}
+.faq-item {border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
+.faq-trigger {width:100%;padding:18px 22px;font-size:15px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;border:none;font-family:var(--font);text-align:left;transition:.15s}
+.faq-trigger:hover {background:var(--bg)}
+.faq-trigger:focus-visible {outline:3px solid var(--blue);outline-offset:-3px}
+.faq-chevron {width:24px;height:24px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s,background .2s}
+.faq-item[aria-expanded="true"] .faq-chevron {transform:rotate(180deg);background:var(--blue)}
+.faq-chevron svg {width:12px;height:12px;fill:var(--blue);transition:fill .2s}
+.faq-item[aria-expanded="true"] .faq-chevron svg {fill:#fff}
+.faq-panel {max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+.faq-item[aria-expanded="true"] .faq-panel {max-height:500px}
+.faq-answer {padding:0 22px 18px;font-size:14.5px;color:var(--text);line-height:1.75;background:#fff}
+.faq-answer a {color:var(--blue)}
+
+/* CTA */
+.cta-section {background:linear-gradient(135deg,#060f18 0%,#0b2545 50%,#1e4ca1 100%);padding:72px 32px;text-align:center}
+.cta-section h2 {font-size:clamp(22px,3vw,36px);font-weight:800;color:#fff;margin-bottom:14px;max-width:700px;margin-left:auto;margin-right:auto}
+.cta-section p {font-size:17px;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-btns {display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.footer {background:#0d1a26;padding:44px 32px 24px}
+.footer-inner {max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.footer-col h5 {color:#fff;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;font-weight:700}
+.footer-col ul {list-style:none}
+.footer-col ul li {padding:4px 0;font-size:12.5px;color:rgba(255,255,255,.4)}
+.footer-bottom {max-width:1100px;margin:0 auto;padding:16px 0 0;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.2)}
+
+@media(max-width:900px){
+  .hero-inner, .two-col {grid-template-columns:1fr}.hero-img-ph{display:none}
+  .usp-inner, .svc-grid, .facility-grid, .doc-grid {grid-template-columns:repeat(2,1fr)}
+  .risk-grid, .fp-grid, .diff-grid {grid-template-columns:1fr}
+  .projects-grid {grid-template-columns:1fr}
+  .hdr-nav {display:none}
+}
+@media(max-width:640px){.svc-grid,.facility-grid,.doc-grid,.usp-inner{grid-template-columns:1fr}.container{padding:0 20px}}
+
+</style>
+</head>
+<body>
+<span style="font-size:11.5px;color:#555">URL: /warehouse-cleaning-services/ · Primary KW: warehouse cleaning services NYC · Persona: Operations Manager / VP of Logistics / Facilities Director</span>
+
+
+
+
+<!-- 1. HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Warehouse &amp; Distribution Center Cleaning · NYC · NJ · CT</p>
+      <h1 id="hero-heading">Warehouse Cleaning That Protects Your Throughput, Your Safety Record, and Your Inspection Readiness</h1>
+      <p class="hero-sub">Most cleaning companies clean warehouses. Advantage Cleaning runs cleaning as part of your operation — shift-integrated, supervisor-accountable, and documented on every service. For Operations Managers who can't afford a vendor that becomes another problem to manage.</p>
+      <div class="hero-btns">
+        <a href="/free-estimate/" class="btn-green-lg">Request a Site Assessment</a>
+        <a href="/quality-system/" class="btn-outline-white">Our Quality System</a>
+      </div>
+      <div class="hero-locs">
+        <span class="hero-loc">New York City — all 5 boroughs</span>
+        <span class="hero-loc">Northern New Jersey</span>
+        <span class="hero-loc">Connecticut</span>
+        <span class="hero-loc">Long Island</span>
+      </div>
+    </div>
+    <div class="hero-img-ph" aria-hidden="true">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/><path d="M8 21V9"/></svg>
+      <p>Warehouse floor — NYC distribution center</p>
+      <small>840 × 560 px</small>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2. USP BAR -->
+<div class="usp-bar" role="list">
+  <div class="usp-inner">
+    <div class="usp-item" role="listitem">
+      <div class="usp-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/></svg>
+      </div>
+      <div class="usp-text"><strong>Commercial Floor Program</strong><span>Ride-on scrubbers, scheduled maintenance</span></div>
+    </div>
+    <div class="usp-item" role="listitem">
+      <div class="usp-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+      <div class="usp-text"><strong>High-Level Dust Cleaning</strong><span>Rafters, beams, shelving — fire risk managed</span></div>
+    </div>
+    <div class="usp-item" role="listitem">
+      <div class="usp-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M9 13h6"/></svg>
+      </div>
+      <div class="usp-text"><strong>Documentation Included</strong><span>Inspection records on every service</span></div>
+    </div>
+    <div class="usp-item" role="listitem">
+      <div class="usp-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="usp-text"><strong>Shift-Integrated Scheduling</strong><span>Night, weekend, and between-shift options</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 3. INTRO -->
+<section class="section" aria-labelledby="intro-heading">
+  <div class="container">
+    <div class="two-col">
+      <div class="prose">
+        <p class="section-label">What Warehouse Cleaning Actually Requires</p>
+        <h2 id="intro-heading" style="font-size:clamp(20px,2.5vw,30px);font-weight:800;color:var(--blue);margin-bottom:16px;line-height:1.2">We Don't Just Clean Warehouses. We Protect Your Operation From Disruption, Safety Exposure, and Inspection Risk.</h2>
+        <p>Most NYC warehouse cleaning vendors sell execution — floors scrubbed, rafters dusted, docks cleared. Advantage Cleaning sells an outcome: a facility that runs clean without the cleaning program becoming a source of risk in itself.</p>
+        <p>That means industrial equipment matched to your floor type. High-level dust programs before they become a fire classification issue. Cleaning schedules built zone-by-zone around your shift patterns — not imposed on top of them. A named supervisor accountable to your operations team, not to a regional call center. And documentation on every service, available on request — not assembled after the fact when an inspector arrives.</p>
+        <p>We serve distribution centers, fulfillment warehouses, manufacturing support facilities, and cold storage operations across New York City, New Jersey, and Connecticut.</p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: Commercial warehouse interior — 800 by 560 pixels">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/><path d="M8 21V9"/></svg>
+        <p>Commercial warehouse — NYC / NJ</p><small>800 × 560 px</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. RISKS -->
+<section class="section section-alt" aria-labelledby="risks-heading">
+  <div class="container">
+    <p class="section-label">What Gets Ignored and Why It Matters</p>
+    <h2 class="section-title" id="risks-heading">Four Warehouse Cleaning Risks That Standard Janitorial Services Miss</h2>
+    <p class="section-sub">Each one has a direct operational consequence. Each one has a specific program to address it.</p>
+    <div class="risk-grid">
+
+      <div class="risk-card">
+        <div class="risk-header">
+          <div class="risk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="risk-title">Floor Contamination — Slip Hazards and Safety Exposure</div>
+        </div>
+        <p class="risk-desc">Oil, grease, forklift fluid, and debris accumulate on warehouse floors faster than routine mopping can address. Slip-and-fall incidents are among the most common causes of serious injury in warehouse environments — and a maintenance gap is the first thing safety inspectors look for when one occurs.</p>
+        <div class="risk-solve"><strong>What We Do</strong>Scheduled ride-on scrubber maintenance, spot treatment of high-traffic and forklift lanes, and inspection records generated on every service — available on request.</div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-header">
+          <div class="risk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="risk-title">High-Level Dust — Fire Risk and Product Contamination</div>
+        </div>
+        <p class="risk-desc">Dust accumulation on rafters, structural beams, storage shelving, and light fixtures is not a housekeeping issue — it is a fire risk classification issue. For food-adjacent and pharmaceutical distribution operations, overhead dust also creates product contamination liability that no amount of floor cleaning resolves.</p>
+        <div class="risk-solve"><strong>What We Do</strong>Scheduled high-level cleaning using industrial vacuum systems and specialized equipment for rafters and structural elements. Frequency set per facility type and usage.</div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-header">
+          <div class="risk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="risk-title">Cleaning Around Operations — Disruption and Downtime</div>
+        </div>
+        <p class="risk-desc">A cleaning program that requires warehouse operations to pause — or that leaves wet floors during active forklift hours — is not a cleaning solution. It is a liability. Cleaning has to integrate with your shift patterns, receiving windows, and inventory movement without creating hazards or reducing throughput.</p>
+        <div class="risk-solve"><strong>What We Do</strong>Cleaning plan built zone-by-zone around your operational schedule. Wet floor areas sequenced around forklift routes. Overnight and weekend scheduling available.</div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-header">
+          <div class="risk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/></svg>
+          </div>
+          <div class="risk-title">No Documentation — Audit and Insurance Exposure</div>
+        </div>
+        <p class="risk-desc">Safety inspectors and insurance assessors ask for maintenance records. Most warehouse cleaning companies cannot produce them. "We clean regularly" is not a documented maintenance record. When an incident occurs, the absence of documentation is a liability — for you, not for your cleaning vendor.</p>
+        <div class="risk-solve"><strong>What We Do</strong>Inspection records generated on every service. Available on request. No assembly required when an inspector or assessor asks for them.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. FACILITY TYPES -->
+<section class="section" aria-labelledby="facility-heading">
+  <div class="container">
+    <p class="section-label">Facility Types</p>
+    <h2 class="section-title" id="facility-heading">Warehouse and Distribution Facility Types We Serve</h2>
+    <p class="section-sub">Different warehouse operations have different cleaning requirements, compliance obligations, and scheduling constraints. We build the program around the specific facility — not a generic scope.</p>
+    <div class="facility-grid">
+
+      <div class="facility-card">
+        <div class="fac-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/><path d="M8 21V9"/></svg>
+        </div>
+        <div class="fac-title">Distribution Centers and Fulfillment Warehouses</div>
+        <p class="fac-desc">High-throughput facilities with continuous operations, forklift traffic, and multiple active zones. Cleaning that integrates with your shift schedule — not one that competes with it.</p>
+        <ul class="fac-items">
+          <li>Zone-by-zone cleaning around active operations</li>
+          <li>Forklift lane grease and fluid management</li>
+          <li>Loading dock and receiving area cleaning</li>
+          <li>Inspection records on every service</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <div class="fac-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="fac-title">Manufacturing Support Facilities</div>
+        <p class="fac-desc">Production-adjacent facilities requiring dust control, equipment area maintenance, and cleaning protocols compatible with manufacturing processes and product protection standards.</p>
+        <ul class="fac-items">
+          <li>Production area dust suppression</li>
+          <li>Equipment surrounds and access areas</li>
+          <li>High-level dust program for combustible materials</li>
+          <li>Segregated cleaning zones per production area</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <div class="fac-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <div class="fac-title">Cold Storage and Food-Adjacent Warehouses</div>
+        <p class="fac-desc">Temperature-controlled facilities and food-adjacent distribution operations requiring green cleaning chemistry, documented product records, and contamination prevention protocols.</p>
+        <ul class="fac-items">
+          <li>Green cleaning products — documented per visit</li>
+          <li>Condensation and moisture management</li>
+          <li>Product contamination prevention protocols</li>
+          <li>Temperature zone cleaning scheduling</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <div class="fac-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="fac-title">Pharmaceutical and Medical Supply Distribution</div>
+        <p class="fac-desc">Distribution facilities for pharmaceutical, medical device, and healthcare supply operations. Green cleaning products standard. Full documentation available for your quality audits.</p>
+        <ul class="fac-items">
+          <li>Green cleaning products on every service</li>
+          <li>Full product documentation per visit</li>
+          <li>Contamination control protocols</li>
+          <li>Documentation available for your quality audits</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <div class="fac-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="fac-title">Multi-Shift and 24-Hour Operations</div>
+        <p class="fac-desc">Continuous operations requiring cleaning that works in windows between shifts, during low-activity periods, and on weekends — without disrupting throughput or creating hazards for active shift workers.</p>
+        <ul class="fac-items">
+          <li>Shift-pattern integrated cleaning schedule</li>
+          <li>Low-activity window floor scrubbing</li>
+          <li>Weekend deep cleaning program</li>
+          <li>Rapid-response spill and incident cleaning</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <div class="fac-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/></svg>
+        </div>
+        <div class="fac-title">Retail and E-Commerce Fulfillment</div>
+        <p class="fac-desc">Last-mile distribution and e-commerce fulfillment centers with high pick-and-pack density, packaging material waste, and conveyor system surrounds requiring daily maintenance to sustain throughput capacity.</p>
+        <ul class="fac-items">
+          <li>Packaging waste and debris management</li>
+          <li>Conveyor system surrounds and access areas</li>
+          <li>Pick zone aisle maintenance</li>
+          <li>Daily and overnight cleaning options</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. SERVICES -->
+<section class="section section-alt" aria-labelledby="svc-heading">
+  <div class="container">
+    <p class="section-label">Services</p>
+    <h2 class="section-title" id="svc-heading">Warehouse Cleaning Services — What the Program Covers</h2>
+    <p class="section-sub">Every service is scoped to the specific requirements of industrial environments — not adapted from office cleaning protocols.</p>
+    <div class="svc-grid">
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/></svg>
+        </div>
+        <div class="svc-title">Commercial Floor Scrubbing and Maintenance</div>
+        <p class="svc-desc">Ride-on and walk-behind scrubbers for concrete, epoxy, and resin floors. Scheduled maintenance matched to facility traffic. Oil, grease, and fluid removal. Tire mark treatment. Inspection records on every service.</p>
+        <span class="svc-badge">Scheduled · Documented</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="svc-title">High-Level Dust Cleaning</div>
+        <p class="svc-desc">High-capacity vacuum systems and elevated equipment for rafters, structural beams, storage shelving units, light fixtures, and HVAC duct surrounds. Scheduled quarterly or semi-annually based on facility type and usage.</p>
+        <span class="svc-badge">Fire risk managed · Semi-annual or quarterly</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+        </div>
+        <div class="svc-title">Loading Dock and Receiving Area Cleaning</div>
+        <p class="svc-desc">Dock plates, dock levelers, loading pit areas, and exterior dock surrounds. Debris removal. Grease and fluid treatment. Drain clearing. High-traffic area cleaning integrated with inbound/outbound scheduling to minimize disruption.</p>
+        <span class="svc-badge">Daily · Shift-integrated</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+        </div>
+        <div class="svc-title">Office and Staff Area Cleaning</div>
+        <p class="svc-desc">Warehouse office, break room, locker room, and restroom cleaning to the same documented standard as the operational floor. Separate scheduling from floor operations to avoid disruption.</p>
+        <span class="svc-badge">Daily · Documented</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="svc-title">Spill Response and Incident Cleaning</div>
+        <p class="svc-desc">Rapid response for spills, leaks, and contamination incidents during operational hours. Immediate hazard neutralization, area decontamination, and incident documentation available on request for insurance and safety review.</p>
+        <span class="svc-badge">Same-day response</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="svc-title">Deep Clean and Annual Program</div>
+        <p class="svc-desc">Full-facility scheduled deep clean — floor restoration, rafter dust removal, full wall wipe-down, restroom deep sanitization, and loading dock pressure treatment. Planned annually or semi-annually around operational shutdowns.</p>
+        <span class="svc-badge">Annual · Semi-annual</span>
+      </div>
+
+    </div>
+
+    <!-- FLOOR PROGRAM HIGHLIGHT -->
+    <div class="floor-prog">
+      <div class="fp-header">
+        <div class="fp-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/></svg>
+        </div>
+        <div>
+          <div class="fp-title">The Warehouse Floor Maintenance Program</div>
+          <div class="fp-sub">Scheduled, documented floor maintenance — not reactive mopping when someone complains</div>
+        </div>
+      </div>
+      <div class="fp-grid">
+        <div class="fp-step">
+          <div class="fp-step-num">Step 1</div>
+          <div class="fp-step-title">Floor Assessment</div>
+          <p class="fp-step-desc">Surface type, contamination points, forklift routes, and high-risk zones mapped before a schedule is agreed.</p>
+        </div>
+        <div class="fp-step">
+          <div class="fp-step-num">Step 2</div>
+          <div class="fp-step-title">Schedule Design</div>
+          <p class="fp-step-desc">Maintenance frequency and zone sequence mapped to shift patterns, inbound/outbound schedules, and operational windows.</p>
+        </div>
+        <div class="fp-step">
+          <div class="fp-step-num">Step 3</div>
+          <div class="fp-step-title">Equipment Selection</div>
+          <p class="fp-step-desc">Ride-on or walk-behind scrubber selected per floor surface type and area dimensions. Chemical compatibility confirmed.</p>
+        </div>
+        <div class="fp-step">
+          <div class="fp-step-num">Step 4</div>
+          <div class="fp-step-title">Documented Execution</div>
+          <p class="fp-step-desc">Every service produces an inspection record — areas covered, date, supervisor sign-off. Available on request.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 7. BEFORE & AFTER PROJECTS -->
+<section class="section" aria-labelledby="projects-heading">
+  <div class="container">
+    <p class="section-label">Recent Work</p>
+    <h2 class="section-title" id="projects-heading">Warehouse and Distribution Cleaning Projects</h2>
+    <p class="section-sub">Every project was scoped, scheduled around active operations, and documented through the Advantage Cleaning quality system.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="ba-wrap">
+          <div class="ba-ph before"><span class="ba-label">Before</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>Before photo</p><small>520 × 320 px</small></div>
+          <div class="ba-ph after"><span class="ba-label">After</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>After photo</p><small>520 × 320 px</small></div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Floor Program · Concrete · Ride-On Scrubber</div>
+          <div class="project-title">Distribution Center — Brooklyn</div>
+          <p class="project-desc">Ongoing floor maintenance program for a large distribution center. Ride-on scrubbing three times weekly, forklift lane treatment, inspection records on every visit.</p>
+          <div class="project-meta"><span class="project-tag">3x weekly</span><span class="project-tag">Brooklyn</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="ba-wrap">
+          <div class="ba-ph before"><span class="ba-label">Before</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>Before photo</p><small>520 × 320 px</small></div>
+          <div class="ba-ph after"><span class="ba-label">After</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>After photo</p><small>520 × 320 px</small></div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">High-Level Dust · Rafters and Structural Beams</div>
+          <div class="project-title">Fulfillment Warehouse — New Jersey</div>
+          <p class="project-desc">Semi-annual high-level cleaning of all rafters, structural beams, and storage shelving using industrial vacuum systems. Completed over two overnight shifts without disrupting operations.</p>
+          <div class="project-meta"><span class="project-tag">40ft rafters</span><span class="project-tag">New Jersey</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="ba-wrap">
+          <div class="ba-ph before"><span class="ba-label">Before</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>Before photo</p><small>520 × 320 px</small></div>
+          <div class="ba-ph after"><span class="ba-label">After</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>After photo</p><small>520 × 320 px</small></div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Annual Deep Clean · Shutdown Window</div>
+          <div class="project-title">Manufacturing Support Facility — Queens</div>
+          <p class="project-desc">Annual full-facility deep clean during a 4-day operational shutdown. Floor restoration, rafter cleaning, full wall wipe-down, restroom deep sanitization, and loading dock pressure treatment.</p>
+          <div class="project-meta"><span class="project-tag">Annual shutdown</span><span class="project-tag">Queens</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="ba-wrap">
+          <div class="ba-ph before"><span class="ba-label">Before</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>Before photo</p><small>520 × 320 px</small></div>
+          <div class="ba-ph after"><span class="ba-label">After</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>After photo</p><small>520 × 320 px</small></div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Loading Dock · Deep Clean · Pressure Treatment</div>
+          <div class="project-title">E-Commerce Fulfillment Center — Bronx</div>
+          <p class="project-desc">Monthly loading dock deep clean — dock plates, levelers, pit areas, and exterior dock apron. Grease and fluid removal, drain clearing. Completed overnight around inbound schedule.</p>
+          <div class="project-meta"><span class="project-tag">Monthly</span><span class="project-tag">Bronx</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="ba-wrap">
+          <div class="ba-ph before"><span class="ba-label">Before</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>Before photo</p><small>520 × 320 px</small></div>
+          <div class="ba-ph after"><span class="ba-label">After</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>After photo</p><small>520 × 320 px</small></div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Floor Restoration · Epoxy Coating Prep</div>
+          <div class="project-title">Cold Storage Warehouse — New Jersey</div>
+          <p class="project-desc">Pre-coating floor restoration ahead of epoxy reapplication. Full degreasing, surface preparation, and documentation for coating contractor handover. Completed over a weekend shutdown.</p>
+          <div class="project-meta"><span class="project-tag">Floor restoration</span><span class="project-tag">Cold storage</span><span class="project-tag">New Jersey</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="ba-wrap">
+          <div class="ba-ph before"><span class="ba-label">Before</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>Before photo</p><small>520 × 320 px</small></div>
+          <div class="ba-ph after"><span class="ba-label">After</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p>After photo</p><small>520 × 320 px</small></div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Spill Response · Same Day</div>
+          <div class="project-title">Distribution Center — Staten Island</div>
+          <p class="project-desc">Same-day hydraulic fluid spill response. Area isolated, fluid removed, surface decontaminated, and incident documentation produced for the risk management team within two hours.</p>
+          <div class="project-meta"><span class="project-tag">Same-day</span><span class="project-tag">Staten Island</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 8. WHY OPERATIONS MANAGERS CHOOSE US -->
+<section class="section section-alt" aria-labelledby="diff-heading">
+  <div class="container">
+    <p class="section-label">Why Operations Managers Choose Us</p>
+    <h2 class="section-title" id="diff-heading">We Own the Outcome. Most Cleaning Companies Just Own the Schedule.</h2>
+    <p class="section-sub">Four capabilities that separate a cleaning program built for warehouse operations from one that was built for offices and adapted to fit.</p>
+    <div class="diff-grid">
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <div class="diff-title">Supervisor Accountability — Not a Crew That Shows Up</div>
+        <p class="diff-desc">Every shift has a named on-site supervisor responsible for the outcome — not a crew dispatched from a call center with a checklist. They run against a cleaning plan built around your shift patterns, dock hours, and inventory cycles. Inspected against agreed performance standards. Reported weekly. You get a written record of what was cleaned, when, and by whom — without having to ask for it.</p>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/></svg>
+        </div>
+        <div class="diff-title">Commercial-Grade Capability — Not Janitorial Equipment in a Warehouse</div>
+        <p class="diff-desc">Warehouse floors, loading docks, high-bay racking, and vehicle traffic zones require ride-on scrubbers, pressure washing, and industrial degreasers — not the equipment a general cleaning company uses in office buildings. Our equipment and chemistry are selected for industrial environments: concrete, epoxy, and treated floor surfaces maintained correctly, and slip-hazard grease and fluid residue eliminated at source — not redistributed.</p>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>
+        </div>
+        <div class="diff-title">Documentation — Available When You Need It</div>
+        <p class="diff-desc">Inspection records generated on every service. Safety compliance documentation for every floor maintenance visit. Before and after photographs included. Green cleaning product records on file. Everything available on request — not assembled under pressure when an inspector or assessor arrives.</p>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+        </div>
+        <div class="diff-title">One Contact. No Call Center. Issues Resolved Before They Reach You.</div>
+        <p class="diff-desc">One dedicated on-site supervisor and one account manager — both of whom coordinate directly with your shift supervisors. Scheduling changes, emergency clean-ups, and spill response are handled at the facility level, not escalated through layers. The standard is not "we'll look into it." It's resolved before it reaches your desk.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 9. WHAT YOU RECEIVE (DARK) -->
+<section class="section section-dark" aria-labelledby="doc-heading">
+  <div class="container">
+    <p class="section-label section-label-white">What You Receive</p>
+    <h2 class="section-title section-title-white" id="doc-heading">Documentation Included on Every Contract</h2>
+    <p class="section-sub section-sub-white">Standard across every Advantage Cleaning warehouse contract — no special requests required.</p>
+    <div class="doc-grid">
+
+      <div class="doc-card">
+        <div class="doc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/></svg>
+        </div>
+        <div class="doc-title">Inspection Records</div>
+        <p class="doc-desc">Service inspection records on every visit — areas maintained, date, supervisor sign-off. Available on request for safety reviews, audits, and insurance assessments.</p>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <div class="doc-title">Before and After Photographs</div>
+        <p class="doc-desc">Timestamped photographs of all areas before and after every service. Included in the service record. Available for insurance assessment or safety review.</p>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="doc-title">Green Cleaning Product Records</div>
+        <p class="doc-desc">Green cleaning products are standard on every contract. Product records and SDS sheets are on file and available on request — for food-adjacent, pharmaceutical, and regulated facilities.</p>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="doc-title">Weekly Performance Reports</div>
+        <p class="doc-desc">Quality scores for every zone in the facility every week. Below-threshold areas flagged and resolved before the next shift. All locations consolidated in one report for the Operations Manager.</p>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="doc-title">Incident Response Documentation</div>
+        <p class="doc-desc">For spill response and incident cleaning — area affected, containment steps, decontamination method, and supervisor sign-off. Available for safety and insurance requirements.</p>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+        </div>
+        <div class="doc-title">Single Account Manager</div>
+        <p class="doc-desc">One named contact for all facilities. Direct line. Same-day response. The person who knows your operational schedule, your facilities, and your priorities — and acts on them without being asked twice.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 10. FAQ -->
+<section class="section section-alt" aria-labelledby="faq-heading">
+  <div class="container">
+    <p class="section-label">Frequently Asked Questions</p>
+    <h2 class="section-title" id="faq-heading">What Operations Managers Ask About Warehouse Cleaning</h2>
+    <div class="faq-list">
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq1" id="faqb1" onclick="faqToggle(this)">Can you schedule floor scrubbing around our operational hours without disrupting forklift traffic?<span class="faq-chevron"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></button>
+        <div class="faq-panel" id="faq1" role="region" aria-labelledby="faqb1"><div class="faq-answer">Yes — and this is one of the first things we scope. Floor maintenance in an active warehouse has to work around forklift routes, shift changeovers, inbound/outbound windows, and zones that can't be taken offline. We map the facility zone by zone and build a scrubbing schedule that maintains the floor without creating hazards or slowing throughput. For most distribution centers, this means overnight or between-shift scheduling with wet floor zones sequenced away from active forklift areas.</div></div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq2" id="faqb2" onclick="faqToggle(this)">What documentation do you provide after each service?<span class="faq-chevron"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></button>
+        <div class="faq-panel" id="faq2" role="region" aria-labelledby="faqb2"><div class="faq-answer">Inspection records are generated on every service and available on request. These include before and after photographs, areas covered, and supervisor sign-off. For spill and incident cleaning, we also produce incident documentation for safety and insurance review.</div></div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq3" id="faqb3" onclick="faqToggle(this)">How often should warehouse rafters and high-level areas be cleaned?<span class="faq-chevron"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></button>
+        <div class="faq-panel" id="faq3" role="region" aria-labelledby="faqb3"><div class="faq-answer">The right frequency depends on the facility type and what is being stored or processed. For general warehousing, semi-annual high-level cleaning is a common baseline. Facilities handling combustible materials, food-adjacent products, or pharmaceutical goods typically require quarterly cleaning as part of their contamination prevention program. We assess the specific facility and recommend a frequency based on actual dust accumulation — not a generic schedule.</div></div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq4" id="faqb4" onclick="faqToggle(this)">Do you provide cleaning for cold storage and food-adjacent warehouses?<span class="faq-chevron"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></button>
+        <div class="faq-panel" id="faq4" role="region" aria-labelledby="faqb4"><div class="faq-answer">Yes. Cold storage and food-adjacent warehouse cleaning requires green cleaning chemistry, documented product records, and contamination prevention protocols. Green cleaning products are standard on every Advantage Cleaning contract. Product records and SDS sheets are on file and available on request for any food safety or quality audit.</div></div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq5" id="faqb5" onclick="faqToggle(this)">Can you manage cleaning across multiple warehouse locations under one contract?<span class="faq-chevron"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></button>
+        <div class="faq-panel" id="faq5" role="region" aria-labelledby="faqb5"><div class="faq-answer">Yes. Multiple warehouse locations across NYC, NJ, and CT can be managed under a single contract with a single account manager. Each facility has its own documented cleaning plan specific to its operational requirements — but all operate under the same quality system. Consolidated weekly performance reports cover all locations in one document.</div></div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq6" id="faqb6" onclick="faqToggle(this)">What happens if there's a spill or incident during operational hours?<span class="faq-chevron"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span></button>
+        <div class="faq-panel" id="faq6" role="region" aria-labelledby="faqb6"><div class="faq-answer">Same-day response. The on-site supervisor coordinates directly with your shift supervisor — no call center, no escalation delay. Area is isolated, hazard neutralized, surface decontaminated, and incident documentation produced. Your operations team doesn't have to manage the process.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 11. CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <h2 id="cta-heading">Request a Warehouse Site Assessment</h2>
+  <p>A facility walkthrough to scope the floor program, high-level dust requirements, and documentation needs for your specific operation. Written program and pricing within 48 hours. No obligation.</p>
+  <div class="cta-btns">
+    <a href="/free-estimate/" class="btn-green-lg">Request a Site Assessment</a>
+    <a href="/quality-system/" class="btn-outline-white">Our Quality System</a>
+  </div>
+</section>
+
+
+
+
+<script>
+function faqToggle(btn){
+  var item = btn.parentElement;
+  var isOpen = item.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-item').forEach(function(el){
+    el.setAttribute('aria-expanded','false');
+    el.querySelector('.faq-trigger').setAttribute('aria-expanded','false');
+  });
+  if(!isOpen){
+    item.setAttribute('aria-expanded','true');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('keydown',function(e){
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('faq-trigger')){
+    e.preventDefault();faqToggle(e.target);
+  }
+});
+</script>
+</div>
+
+
+<!-- MANHATTAN CSS (scoped) -->
+
+
+<!-- ==================== MANHATTAN PAGE ==================== -->
+</body>
+</html>

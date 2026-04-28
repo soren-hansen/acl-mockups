@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advantage Cleaning LLC – Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ===== PAGE SWITCHER ===== */
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --accent:#1e4ca1;
+  --accent-green:#44953e;
+  --accent-light:#e8edf8;
+  --base:#f0f2f5;
+  --base-2:#fff;
+  --base-3:#1e4ca1;
+  --base-4:#1e4ca1;
+  --dk-blue:#0b2545;
+  --text:#1a1a2e;
+  --text-mid:#444;
+  --text-light:#666;
+  --border:#dde3f0;
+  --green-badge-bg:rgba(142,231,136,0.31);
+  --green-badge-color:#469240;
+  --max-w:1200px;
+  --radius:8px;
+}
+
+/* ===== BASE RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:#fff;padding-top:44px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;height:auto;display:block;}
+p{margin-bottom:1em;}
+p:last-child{margin-bottom:0;}
+ul{margin:0 0 1em 1.25em;}
+h1,h2,h3,h4,h5{line-height:1.25;color:var(--dk-blue);}
+
+/* ===== NAV ===== */
+.site-nav{position:fixed;top:44px;left:0;width:100%;background:#fff;border-bottom:1px solid var(--border);z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.site-nav .inner{max-width:var(--max-w);margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-weight:800;font-size:18px;color:var(--dk-blue);letter-spacing:-.5px;}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;}
+.nav-links a{color:var(--text);letter-spacing:.5px;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:2px;font-weight:600;}
+.nav-cta:hover{background:#163d85;text-decoration:none!important;}
+.nav-secondary{background:var(--dk-blue);padding:0;}
+.nav-secondary .inner{display:flex;justify-content:flex-end;gap:20px;font-size:13px;padding:6px 30px;}
+.nav-secondary a{color:#aab8cc;}
+.nav-secondary a:hover{color:#fff;}
+body{padding-top:108px;}
+
+/* ===== HERO ===== */
+.hero{background-color:var(--dk-blue);background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;position:relative;padding:100px 30px 80px;}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(11,37,69,.72);}
+.hero .inner{max-width:var(--max-w);margin:0 auto;position:relative;z-index:1;max-width:700px;}
+.hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;color:#7da4d8;text-transform:uppercase;margin-bottom:16px;}
+.hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.15;}
+.hero h1 mark{background:transparent;color:#7ee87a;}
+.hero-tagline{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:28px;max-width:600px;}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:40px;font-size:13px;color:#fff;font-weight:500;}
+.hero-badge svg{opacity:.8;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent-green);color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-primary:hover{background:#357a2f;text-decoration:none!important;}
+.btn-secondary{background:transparent;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(255,255,255,.5);}
+.btn-secondary:hover{border-color:#fff;text-decoration:none!important;}
+
+/* ===== LOCATIONS BAR ===== */
+.locations-bar{background:#f0f2f5;border-bottom:1px solid var(--border);padding:12px 30px;}
+.locations-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:24px;font-size:13px;}
+.locations-bar strong{color:var(--dk-blue);font-weight:700;}
+.loc-link{display:flex;align-items:center;gap:5px;color:var(--text-mid);}
+.loc-link:hover{color:var(--accent);}
+
+/* ===== TRUST ICONS BAR ===== */
+.trust-bar{background:#fff;border-bottom:1px solid var(--border);padding:14px 30px;}
+.trust-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-mid);}
+.trust-item svg{color:var(--accent);}
+
+/* ===== SECTION BASE ===== */
+.section{padding:72px 30px;}
+.section-inner{max-width:var(--max-w);margin:0 auto;}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.section-title{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--dk-blue);margin-bottom:16px;}
+.section-sub{font-size:17px;color:var(--text-mid);max-width:680px;margin-bottom:40px;}
+.section-alt{background:var(--base);}
+.section-dark{background:var(--dk-blue);}
+.section-dark .section-eyebrow{color:#7da4d8;}
+.section-dark .section-title{color:#fff;}
+.section-dark .section-sub{color:rgba(255,255,255,.75);}
+.section-dark p{color:rgba(255,255,255,.8);}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{background:#f7f8fc;border-bottom:1px solid var(--border);padding:10px 30px;font-size:13px;color:var(--text-light);}
+.breadcrumb .inner{max-width:var(--max-w);margin:0 auto;}
+.breadcrumb a{color:var(--text-mid);}
+
+/* ===== INTRO SPLIT ===== */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.intro-grid img{border-radius:var(--radius);}
+@media(max-width:768px){.intro-grid{grid-template-columns:1fr;}}
+.intro-text h2{font-size:clamp(20px,2.5vw,30px);font-weight:800;margin-bottom:16px;}
+.intro-text p{font-size:16px;color:var(--text-mid);margin-bottom:14px;}
+
+/* ===== 5 PILLARS ===== */
+.pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.pillars-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.pillars-grid{grid-template-columns:repeat(2,1fr);}}
+.pillar-card{text-align:center;padding:24px 16px;}
+.pillar-num{width:60px;height:60px;margin:0 auto 16px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;}
+.pillar-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.pillar-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== QUALITY STEPS ===== */
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
+.step-card{text-align:center;padding:24px 16px;background:#fff;border-radius:var(--radius);border:1px solid var(--border);}
+.step-num{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;}
+.step-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.step-card p{font-size:13px;color:var(--text-light);}
+.steps-cta{text-align:center;margin-top:32px;}
+.btn-outline{display:inline-block;padding:11px 24px;border:2px solid var(--accent);color:var(--accent)!important;border-radius:2px;font-weight:600;font-size:14px;}
+.btn-outline:hover{background:var(--accent);color:#fff!important;text-decoration:none!important;}
+
+/* ===== SERVICES GRID ===== */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+.service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;}
+.service-card svg{color:var(--accent);}
+.service-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.service-card p{font-size:13px;color:var(--text-mid);flex:1;}
+.service-badge{display:inline-block;background:var(--green-badge-bg);color:var(--green-badge-color);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid rgba(70,146,64,.25);}
+
+/* ===== SPECIALIST SERVICES ===== */
+.specialist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.specialist-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.specialist-grid{grid-template-columns:1fr;}}
+
+/* ===== INDUSTRIES ===== */
+.industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+@media(max-width:900px){.industries-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.industries-grid{grid-template-columns:1fr;}}
+.industry-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+.industry-card img{width:100%;height:180px;object-fit:cover;}
+.industry-card-body{padding:20px;}
+.industry-card-body h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.industry-card-body .tag{font-size:12px;color:var(--text-light);margin-bottom:12px;}
+.industry-card-body a{font-size:13px;font-weight:600;color:var(--accent);}
+
+/* ===== WHY CHOOSE US ===== */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px;}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr;}}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px;}
+.why-card svg{color:var(--accent);}
+.why-card h4{font-size:16px;font-weight:700;color:var(--dk-blue);}
+.why-card p{font-size:14px;color:var(--text-mid);}
+.why-image{margin-top:40px;border-radius:var(--radius);overflow:hidden;}
+.why-image img{width:100%;max-height:380px;object-fit:cover;}
+
+/* ===== DELIVERABLES ===== */
+.deliv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:768px){.deliv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.deliv-grid{grid-template-columns:1fr;}}
+.deliv-card{padding:24px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:10px;}
+.deliv-card svg{color:var(--accent);}
+.deliv-card h3{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.deliv-card p{font-size:13px;color:var(--text-mid);}
+
+/* ===== STATS ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;}
+@media(max-width:600px){.stats-grid{grid-template-columns:1fr;}}
+.stat-card{text-align:center;}
+.stat-num{font-size:clamp(36px,5vw,60px);font-weight:900;color:#fff;margin-bottom:6px;}
+.stat-label{font-size:14px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:8px;}
+.stat-desc{font-size:13px;color:rgba(255,255,255,.65);}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr;}}
+.testimonial{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:32px;}
+.testimonial blockquote{font-size:16px;font-style:italic;color:rgba(255,255,255,.9);line-height:1.7;margin-bottom:16px;}
+.testimonial cite{font-size:12px;font-weight:700;letter-spacing:1px;color:#7da4d8;text-transform:uppercase;}
+
+/* ===== COVERAGE ===== */
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+@media(max-width:768px){.coverage-grid{grid-template-columns:repeat(2,1fr);}}
+.coverage-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;}
+.coverage-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.coverage-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin-top:32px;}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+.faq-item:first-child{padding-top:0;}
+.faq-q{font-size:16px;font-weight:700;color:var(--dk-blue);margin-bottom:10px;}
+.faq-a{font-size:15px;color:var(--text-mid);line-height:1.65;}
+
+/* ===== CTA BAND ===== */
+.cta-band{background:var(--accent);padding:60px 30px;text-align:center;}
+.cta-band h2{color:#fff;font-size:clamp(22px,3vw,32px);font-weight:800;margin-bottom:12px;}
+.cta-band p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:28px;}
+.btn-white{background:#fff;color:var(--accent)!important;padding:14px 30px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-white:hover{background:#e8edf8;text-decoration:none!important;}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--dk-blue);padding:40px 30px 24px;color:rgba(255,255,255,.6);font-size:13px;}
+.site-footer .inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+
+</style>
+</head>
+<body>
+</div>
+
+<div class="hero" style="background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');">
+  <div class="inner">
+    <p class="hero-eyebrow">Commercial Cleaning Company &middot; NYC &middot; NJ &middot; CT</p>
+    <h1>New York&rsquo;s Commercial Cleaning Company<br><mark>Facility Managers Don&rsquo;t Have to Think About</mark></h1>
+    <p class="hero-tagline">Advantage Cleaning serves offices, schools, warehouses, and cultural institutions across New York City, New Jersey, and Connecticut. Supervisor-verified shifts. Weekly KPI reports. Compliance documentation built in. The same standard every day, not just on the first week of a contract.</p>
+    <div class="hero-badges">
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
+      <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
+    </div>
+    <div class="hero-btns"><a href="#" class="btn-primary">Request a Facility Assessment</a><a href="#" class="btn-secondary">Our Quality System</a></div>
+  </div>
+</div>
+<div class="locations-bar"><div class="inner"><strong>Locations We Serve:</strong><a href="#" class="loc-link">&#128205; New York</a><a href="#" class="loc-link">&#128205; New Jersey</a><a href="#" class="loc-link">&#128205; Connecticut</a></div></div>
+<div class="trust-bar"><div class="inner">
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Quality System</div>
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green Cleaning</div>
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single Point of Contact</div>
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>T-CSCT &middot; GBAC &middot; MBE</div>
+</div></div>
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">What Facility Managers Get</p>
+  <h2 class="section-title">Engineered for Consistent High-Quality Performance</h2>
+  <p>Advantage Cleaning is not a standard janitorial company. Behind every shift sits a dedicated supervisor, a documented cleaning plan, and a digital quality system that flags any shortfall before your staff notices it. Whether you manage one building or a portfolio across the Tri-State area, the performance standard stays the same.</p>
+  <p style="margin-top:16px;">Most facility managers have seen the same pattern. A cleaning company starts strong, then loses discipline over the first year. By the time complaints reach you from staff or tenants, the decline has been going on for months. The root cause is almost always the same: no system holding performance to a standard. Individual cleaners fall back on habit. Supervisors too stretched to inspect every shift. Without data, there is no way to catch the slide before it becomes a problem.</p>
+  <p style="margin-top:16px;">Advantage Cleaning was built around that problem. Every shift runs against a documented cleaning plan. A dedicated supervisor inspects the work against your agreed KPIs and a performance report goes back to your team automatically. You get data, not assurances.</p>
+</div></div>
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">Commercial Cleaning Services</p>
+  <h2 class="section-title">Every Type of Commercial Facility. One Quality Standard.</h2>
+  <p class="section-sub">From a 1,000 sq ft professional office to a 500,000 sq ft distribution center &mdash; the same documented quality system, the same verification, the same records.</p>
+  <div class="services-grid">
+    <div class="service-card"><h4>Commercial Cleaning</h4><p>Full-service commercial facility cleaning for offices, buildings, and multi-tenant properties across NYC.</p><a href="#" style="font-size:13px;font-weight:600;">Learn more &rarr;</a></div>
+    <div class="service-card"><h4>Office Cleaning</h4><p>Class A towers to corporate campuses. Professional offices, multi-tenant buildings, day porter services.</p><a href="#" style="font-size:13px;font-weight:600;">Learn more &rarr;</a></div>
+    <div class="service-card"><h4>School Cleaning</h4><p>K&ndash;12 campuses and multi-school networks. Green cleaning products built into every contract.</p><a href="#" onclick="showPage('school-cleaning');return false;" style="font-size:13px;font-weight:600;">Learn more &rarr;</a></div>
+    <div class="service-card"><h4>Floor Cleaning</h4><p>VCT strip &amp; wax, carpet extraction, marble restoration, and concrete maintenance. Specialists for every surface type.</p><a href="#" style="font-size:13px;font-weight:600;">Learn more &rarr;</a></div>
+    <div class="service-card"><h4>Deep Cleaning</h4><p>Scheduled programmes &mdash; electrostatic disinfection, restroom cleaning and sanitizing, surface restoration.</p><a href="#" style="font-size:13px;font-weight:600;">Learn more &rarr;</a></div>
+    <div class="service-card"><h4>Construction Cleaning</h4><p>Post-construction cleaning for GCs and developers. 4-phase programme &mdash; protect, remove, detail, document.</p><a href="#" style="font-size:13px;font-weight:600;">Learn more &rarr;</a></div>
+  </div>
+</div></div>
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">Why Advantage Cleaning</p>
+  <h2 class="section-title">Every Commercial Cleaning Company Claims Quality. Here Is What We Actually Do Differently.</h2>
+  <p class="section-sub">Four things we do that most NYC cleaning companies simply don&rsquo;t &mdash; and we&rsquo;ll prove it before you sign.</p>
+  <div class="why-grid">
+    <div class="why-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg><h4>Supervisor-Verified Quality &mdash; Every Shift</h4><p>Every shift runs against your facility&rsquo;s documented cleaning plan. A supervisor inspects the work, reviews quality performance, and corrects deviations before the day is over. You receive a weekly quality score report. Most cleaning companies have no equivalent process.</p></div>
+    <div class="why-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg><h4>Supporting Documents &mdash; Ready When You Need Them</h4><p>Quality records generated on every shift. Safety and green cleaning documentation available on demand &mdash; no assembly required.</p></div>
+    <div class="why-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg><h4>Single Point of Contact</h4><p>One account manager for your entire portfolio. One supervisor per facility. One number to call. Issues identified and resolved on-site, not escalated to your desk.</p></div>
+    <div class="why-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><h4>Specialist Care for Premium Surfaces</h4><p>Marble and stone specialists using stone-safe chemistry. Metal care technicians using alloy-specific compounds for stainless steel, brass, and bronze. The wrong product on premium finishes causes permanent damage.</p></div>
+  </div>
+</div></div>
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">The Quality System</p>
+  <h2 class="section-title">Six Steps. Every Facility. Every Contract.</h2>
+  <div class="steps-grid">
+    <div class="step-card"><div class="step-num">1</div><h4>Assess</h4><p>Walk-through to assess your facility and priorities.</p></div>
+    <div class="step-card"><div class="step-num">2</div><h4>Plan</h4><p>Detailed custom cleaning plan, specific to your building.</p></div>
+    <div class="step-card"><div class="step-num">3</div><h4>Execute</h4><p>Trained team. Briefed on your plan. Right products.</p></div>
+    <div class="step-card"><div class="step-num">4</div><h4>Inspect</h4><p>Supervisor scores every zone. Issues corrected on-site.</p></div>
+    <div class="step-card"><div class="step-num">5</div><h4>Report</h4><p>Weekly KPI report across all areas.</p></div>
+    <div class="step-card"><div class="step-num">6</div><h4>Improve</h4><p>Review, implement changes. System improves over time.</p></div>
+  </div>
+</div></div>
+<div class="section section-dark"><div class="section-inner">
+  <p class="section-eyebrow">Track Record</p>
+  <h2 class="section-title">What Our Client Retention Looks Like</h2>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">School Campuses</div><div class="stat-desc">The same high-quality standards across 7 charter school locations under one contract.</div></div>
+    <div class="stat-card"><div class="stat-num">Weekly</div><div class="stat-label">KPI Reports &mdash; Every Building</div><div class="stat-desc">Quality scores across every facility, every week. Issues identified and resolved proactively.</div></div>
+    <div class="stat-card"><div class="stat-num">NYC+</div><div class="stat-label">All 5 Boroughs &middot; NJ &middot; CT</div><div class="stat-desc">One quality system across every facility type in the Tri-State area. Same standard, different building.</div></div>
+  </div>
+  <div class="testimonials-grid" style="margin-top:48px;">
+    <div class="testimonial"><blockquote>&ldquo;I can honestly say that in my twenty years&rsquo; experience, Advantage Cleaning is by far the best cleaning company I have ever worked with. If given the choice to bring them in-house, I would refuse &mdash; because of how good a job they do.&rdquo;</blockquote><cite>&mdash; Director of Facilities, Major NYC Visitor Attraction</cite></div>
+    <div class="testimonial"><blockquote>&ldquo;I have been consistently impressed by the service and support. The staff is well-trained, reliable, and engaged. I have found them to be honest, forthright, and highly accountable.&rdquo;</blockquote><cite>&mdash; Director, Facilities &amp; New Property Real Estate &middot; Charter School Network, NYC</cite></div>
+  </div>
+</div></div>
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">Our Recent Projects</p>
+  <h2 class="section-title">Before &amp; After &mdash; Recent Projects Across NYC</h2>
+  <div class="specialist-grid">
+    <div class="service-card"><h4>Marble Lobby Restoration &mdash; Class A Office Tower, Midtown</h4><p>Annual marble honing, polishing, and sealing. Surface preserved and protected for another year.</p><span class="service-badge">Midtown &middot; Marble Specialist</span></div>
+    <div class="service-card"><h4>VCT Strip &amp; Wax &mdash; Charter School, Brooklyn</h4><p>Annual strip and wax of VCT floors across classrooms and corridors. Green cleaning compliant products throughout.</p><span class="service-badge">Brooklyn &middot; Annual</span></div>
+    <div class="service-card"><h4>Post-Construction Clean &mdash; Office Fit-Out, Lower Manhattan</h4><p>4-phase clean after tenant renovation. Handover-ready on schedule. Full documentation.</p><span class="service-badge">Lower Manhattan &middot; 4-phase</span></div>
+    <div class="service-card"><h4>Warehouse Floor Programme &mdash; Distribution Center, New Jersey</h4><p>120,000 sq ft weekly floor scrubbing and maintenance programme.</p><span class="service-badge">120,000 sq ft &middot; New Jersey</span></div>
+  </div>
+</div></div>
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">Facilities We Serve</p>
+  <h2 class="section-title">Built for Facility Managers Who Need More Than a Cleaning Service</h2>
+  <div class="industries-grid">
+    <div class="industry-card"><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp" alt="Office cleaning Manhattan" loading="lazy"><div class="industry-card-body"><h4>Office &amp; Corporate Buildings</h4><p class="tag">Class A towers &middot; Corporate campuses &middot; Multi-tenant</p><a href="#">Office Cleaning &rarr;</a></div></div>
+    <div class="industry-card"><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2025/08/School-cleaning-services-NYC-picture-of-school-on-Manhattan-1-1024x478.webp" alt="School cleaning NYC" loading="lazy"><div class="industry-card-body"><h4>Schools &amp; Charter Networks</h4><p class="tag">K&ndash;12 campuses &middot; Green cleaning standard</p><a href="#" onclick="showPage('school-cleaning');return false;">School Cleaning &rarr;</a></div></div>
+    <div class="industry-card"><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2024/08/Attraction-cleaning-services-by-Advantage-Cleaning-LLC-1024x492.jpg" alt="Attractions cleaning NYC" loading="lazy"><div class="industry-card-body"><h4>Visitor Attractions &amp; Cultural Institutions</h4><p class="tag">High-volume public venues &middot; Premium surface care</p><a href="#" onclick="showPage('attractions-cleaning');return false;">Attractions Cleaning &rarr;</a></div></div>
+    <div class="industry-card"><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Warehouse-floor-cleaning-auto-scrubbers-cleaning-warehouse-concrete-floor-1024x512.webp" alt="Warehouse cleaning NJ" loading="lazy"><div class="industry-card-body"><h4>Warehouses &amp; Distribution</h4><p class="tag">Safety-compliant floor programmes &middot; Large-format</p><a href="#">Warehouse Cleaning &rarr;</a></div></div>
+    <div class="industry-card"><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Post-construction-cleaning-of-700000-sq-ft-movie-studio-in-Queens-New-York-City-1024x512.webp" alt="Post-construction cleaning NYC" loading="lazy"><div class="industry-card-body"><h4>Construction &amp; Development</h4><p class="tag">4-phase process &middot; Client-ready handover</p><a href="#">Construction Cleaning &rarr;</a></div></div>
+    <div class="industry-card"><img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Green-Cleaning-1024x512.webp" alt="Green cleaning NYC" loading="lazy"><div class="industry-card-body"><h4>Multi-Property Portfolios</h4><p class="tag">One contract &middot; One account manager &middot; All locations</p><a href="#" onclick="showPage('green-cleaning');return false;">Green Cleaning &rarr;</a></div></div>
+  </div>
+</div></div>
+<div class="section"><div class="section-inner">
+  <p class="section-eyebrow">About Advantage Cleaning</p>
+  <h2 class="section-title">New York&rsquo;s Commercial Cleaning Company &mdash; Built on Ownership and Accountability</h2>
+  <p>Advantage Cleaning is a New York City commercial cleaning company serving offices, schools, cultural institutions, and warehouses across the Tri-State area. Every contract is backed by a documented quality system, a dedicated on-site supervisor, and a single point of contact &mdash; from the first shift to year five.</p>
+  <p style="margin-top:14px;">MBE certified. GBAC accredited. T-CSCT Surgical Cleaning certified. Operating continuously in NYC for over 7 years.</p>
+  <p style="margin-top:20px;"><a href="#" class="btn-outline">About Us &rarr;</a></p>
+</div></div>
+<div class="section section-alt"><div class="section-inner">
+  <p class="section-eyebrow">Frequently Asked Questions</p>
+  <h2 class="section-title">Common Questions About Advantage Cleaning</h2>
+  <div class="faq-list">
+    <div class="faq-item"><p class="faq-q">How does Advantage Cleaning ensure consistent results?</p><p class="faq-a">Every shift runs against a custom cleaning plan, with a supervisor scoring each zone and correcting deviations before the building opens. A weekly quality score report goes to your team automatically &mdash; no chasing required.</p></div>
+    <div class="faq-item"><p class="faq-q">Can you maintain the same standard across multiple facilities?</p><p class="faq-a">Yes. Our process, people, and digital cleaning system follow identical standards whether you manage 1 facility or 20. Real-time reporting and quality metrics give you proof of performance across all facilities, consolidated in one weekly report.</p></div>
+    <div class="faq-item"><p class="faq-q">What happens when something goes wrong?</p><p class="faq-a">Our supervisors catch deviations before you do. Issues are corrected in real time, logged in the system, and verified &mdash; so you never have to chase follow-up.</p></div>
+    <div class="faq-item"><p class="faq-q">What size facilities do you serve?</p><p class="faq-a">We specialise in properties from 1,000 to over 1,000,000 sq ft &mdash; including schools, warehouses, and multi-property portfolios across Manhattan, Brooklyn, Queens, the Bronx, New Jersey, and Connecticut.</p></div>
+  </div>
+</div></div>
+<div class="cta-band"><h2>Ready to Talk About Your Facility?</h2><p>Request a facility assessment. We&rsquo;ll review your facility, build a custom cleaning plan, and provide a documented proposal &mdash; before you commit to anything.</p><a href="#" class="btn-white">Request a Facility Assessment</a></div>
+</div><!-- /homepage -->
+
+<!-- ==================== OFFICE CLEANING PAGE ==================== -->
+</body>
+</html>

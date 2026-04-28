@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advantage Cleaning LLC – Disinfection Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ===== PAGE SWITCHER ===== */
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --accent:#1e4ca1;
+  --accent-green:#44953e;
+  --accent-light:#e8edf8;
+  --base:#f0f2f5;
+  --base-2:#fff;
+  --base-3:#1e4ca1;
+  --base-4:#1e4ca1;
+  --dk-blue:#0b2545;
+  --text:#1a1a2e;
+  --text-mid:#444;
+  --text-light:#666;
+  --border:#dde3f0;
+  --green-badge-bg:rgba(142,231,136,0.31);
+  --green-badge-color:#469240;
+  --max-w:1200px;
+  --radius:8px;
+}
+
+/* ===== BASE RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:#fff;padding-top:44px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;height:auto;display:block;}
+p{margin-bottom:1em;}
+p:last-child{margin-bottom:0;}
+ul{margin:0 0 1em 1.25em;}
+h1,h2,h3,h4,h5{line-height:1.25;color:var(--dk-blue);}
+
+/* ===== NAV ===== */
+.site-nav{position:fixed;top:44px;left:0;width:100%;background:#fff;border-bottom:1px solid var(--border);z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.site-nav .inner{max-width:var(--max-w);margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-weight:800;font-size:18px;color:var(--dk-blue);letter-spacing:-.5px;}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;}
+.nav-links a{color:var(--text);letter-spacing:.5px;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:2px;font-weight:600;}
+.nav-cta:hover{background:#163d85;text-decoration:none!important;}
+.nav-secondary{background:var(--dk-blue);padding:0;}
+.nav-secondary .inner{display:flex;justify-content:flex-end;gap:20px;font-size:13px;padding:6px 30px;}
+.nav-secondary a{color:#aab8cc;}
+.nav-secondary a:hover{color:#fff;}
+body{padding-top:108px;}
+
+/* ===== HERO ===== */
+.hero{background-color:var(--dk-blue);background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;position:relative;padding:100px 30px 80px;}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(11,37,69,.72);}
+.hero .inner{max-width:var(--max-w);margin:0 auto;position:relative;z-index:1;max-width:700px;}
+.hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;color:#7da4d8;text-transform:uppercase;margin-bottom:16px;}
+.hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.15;}
+.hero h1 mark{background:transparent;color:#7ee87a;}
+.hero-tagline{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:28px;max-width:600px;}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:40px;font-size:13px;color:#fff;font-weight:500;}
+.hero-badge svg{opacity:.8;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent-green);color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-primary:hover{background:#357a2f;text-decoration:none!important;}
+.btn-secondary{background:transparent;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(255,255,255,.5);}
+.btn-secondary:hover{border-color:#fff;text-decoration:none!important;}
+
+/* ===== LOCATIONS BAR ===== */
+.locations-bar{background:#f0f2f5;border-bottom:1px solid var(--border);padding:12px 30px;}
+.locations-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:24px;font-size:13px;}
+.locations-bar strong{color:var(--dk-blue);font-weight:700;}
+.loc-link{display:flex;align-items:center;gap:5px;color:var(--text-mid);}
+.loc-link:hover{color:var(--accent);}
+
+/* ===== TRUST ICONS BAR ===== */
+.trust-bar{background:#fff;border-bottom:1px solid var(--border);padding:14px 30px;}
+.trust-bar .inner{max-width:var(--max-w);margin:0 auto;display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-mid);}
+.trust-item svg{color:var(--accent);}
+
+/* ===== SECTION BASE ===== */
+.section{padding:72px 30px;}
+.section-inner{max-width:var(--max-w);margin:0 auto;}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.section-title{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--dk-blue);margin-bottom:16px;}
+.section-sub{font-size:17px;color:var(--text-mid);max-width:680px;margin-bottom:40px;}
+.section-alt{background:var(--base);}
+.section-dark{background:var(--dk-blue);}
+.section-dark .section-eyebrow{color:#7da4d8;}
+.section-dark .section-title{color:#fff;}
+.section-dark .section-sub{color:rgba(255,255,255,.75);}
+.section-dark p{color:rgba(255,255,255,.8);}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{background:#f7f8fc;border-bottom:1px solid var(--border);padding:10px 30px;font-size:13px;color:var(--text-light);}
+.breadcrumb .inner{max-width:var(--max-w);margin:0 auto;}
+.breadcrumb a{color:var(--text-mid);}
+
+/* ===== INTRO SPLIT ===== */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.intro-grid img{border-radius:var(--radius);}
+@media(max-width:768px){.intro-grid{grid-template-columns:1fr;}}
+.intro-text h2{font-size:clamp(20px,2.5vw,30px);font-weight:800;margin-bottom:16px;}
+.intro-text p{font-size:16px;color:var(--text-mid);margin-bottom:14px;}
+
+/* ===== 5 PILLARS ===== */
+.pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.pillars-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.pillars-grid{grid-template-columns:repeat(2,1fr);}}
+.pillar-card{text-align:center;padding:24px 16px;}
+.pillar-num{width:60px;height:60px;margin:0 auto 16px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;}
+.pillar-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.pillar-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== QUALITY STEPS ===== */
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:40px;}
+@media(max-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
+.step-card{text-align:center;padding:24px 16px;background:#fff;border-radius:var(--radius);border:1px solid var(--border);}
+.step-num{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--dk-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;}
+.step-card h4{font-size:14px;font-weight:700;color:var(--dk-blue);margin-bottom:6px;}
+.step-card p{font-size:13px;color:var(--text-light);}
+.steps-cta{text-align:center;margin-top:32px;}
+.btn-outline{display:inline-block;padding:11px 24px;border:2px solid var(--accent);color:var(--accent)!important;border-radius:2px;font-weight:600;font-size:14px;}
+.btn-outline:hover{background:var(--accent);color:#fff!important;text-decoration:none!important;}
+
+/* ===== SERVICES GRID ===== */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+.service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;}
+.service-card svg{color:var(--accent);}
+.service-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.service-card p{font-size:13px;color:var(--text-mid);flex:1;}
+.service-badge{display:inline-block;background:var(--green-badge-bg);color:var(--green-badge-color);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid rgba(70,146,64,.25);}
+
+/* ===== SPECIALIST SERVICES ===== */
+.specialist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:900px){.specialist-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.specialist-grid{grid-template-columns:1fr;}}
+
+/* ===== INDUSTRIES ===== */
+.industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+@media(max-width:900px){.industries-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.industries-grid{grid-template-columns:1fr;}}
+.industry-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+.industry-card img{width:100%;height:180px;object-fit:cover;}
+.industry-card-body{padding:20px;}
+.industry-card-body h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.industry-card-body .tag{font-size:12px;color:var(--text-light);margin-bottom:12px;}
+.industry-card-body a{font-size:13px;font-weight:600;color:var(--accent);}
+
+/* ===== WHY CHOOSE US ===== */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px;}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr;}}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px;}
+.why-card svg{color:var(--accent);}
+.why-card h4{font-size:16px;font-weight:700;color:var(--dk-blue);}
+.why-card p{font-size:14px;color:var(--text-mid);}
+.why-image{margin-top:40px;border-radius:var(--radius);overflow:hidden;}
+.why-image img{width:100%;max-height:380px;object-fit:cover;}
+
+/* ===== DELIVERABLES ===== */
+.deliv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+@media(max-width:768px){.deliv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.deliv-grid{grid-template-columns:1fr;}}
+.deliv-card{padding:24px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:10px;}
+.deliv-card svg{color:var(--accent);}
+.deliv-card h3{font-size:15px;font-weight:700;color:var(--dk-blue);}
+.deliv-card p{font-size:13px;color:var(--text-mid);}
+
+/* ===== STATS ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;}
+@media(max-width:600px){.stats-grid{grid-template-columns:1fr;}}
+.stat-card{text-align:center;}
+.stat-num{font-size:clamp(36px,5vw,60px);font-weight:900;color:#fff;margin-bottom:6px;}
+.stat-label{font-size:14px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:8px;}
+.stat-desc{font-size:13px;color:rgba(255,255,255,.65);}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr;}}
+.testimonial{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:32px;}
+.testimonial blockquote{font-size:16px;font-style:italic;color:rgba(255,255,255,.9);line-height:1.7;margin-bottom:16px;}
+.testimonial cite{font-size:12px;font-weight:700;letter-spacing:1px;color:#7da4d8;text-transform:uppercase;}
+
+/* ===== COVERAGE ===== */
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+@media(max-width:768px){.coverage-grid{grid-template-columns:repeat(2,1fr);}}
+.coverage-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;}
+.coverage-card h4{font-size:15px;font-weight:700;color:var(--dk-blue);margin-bottom:4px;}
+.coverage-card p{font-size:13px;color:var(--text-light);}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin-top:32px;}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+.faq-item:first-child{padding-top:0;}
+.faq-q{font-size:16px;font-weight:700;color:var(--dk-blue);margin-bottom:10px;}
+.faq-a{font-size:15px;color:var(--text-mid);line-height:1.65;}
+
+/* ===== CTA BAND ===== */
+.cta-band{background:var(--accent);padding:60px 30px;text-align:center;}
+.cta-band h2{color:#fff;font-size:clamp(22px,3vw,32px);font-weight:800;margin-bottom:12px;}
+.cta-band p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:28px;}
+.btn-white{background:#fff;color:var(--accent)!important;padding:14px 30px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
+.btn-white:hover{background:#e8edf8;text-decoration:none!important;}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--dk-blue);padding:40px 30px 24px;color:rgba(255,255,255,.6);font-size:13px;}
+.site-footer .inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+
+</style>
+</head>
+<body>
+<!-- NAV -->
+
+
+<!-- HERO -->
+<section class="hero" style="background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');">
+  <div class="inner">
+    <p class="hero-eyebrow">Commercial Disinfection &mdash; NYC &middot; NJ &middot; CT</p>
+    <h1>Commercial Disinfection Services<br>in <mark>New York City</mark></h1>
+    <p class="hero-tagline">Controlled. Inspected. Documented. Hospital-grade disinfectants, electrostatic spraying technology, and a digital report after every job.</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 6-Step Protocol</span>
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> GBAC-Certified Staff</span>
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Digital Report Every Job</span>
+      <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All 5 NYC Boroughs</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">Request a Disinfection Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- OPENING STATEMENT -->
+<section style="background:#f0f2f5;padding:48px 30px;">
+  <div style="max-width:800px;margin:0 auto;">
+    <p style="font-size:19px;line-height:1.65;color:#1a1a2e;font-weight:500;">Disinfection is not cleaning. The distinction matters.</p>
+    <p style="font-size:16px;color:#444;margin-top:16px;">A clean surface looks acceptable. A disinfected surface has had a verified pathogen-killing agent applied at the correct concentration, left for the required dwell time, and confirmed effective by a supervisor &mdash; before the building opens. Most vendors don&rsquo;t operate that way. Most don&rsquo;t produce any documentation showing that they did.</p>
+    <p style="font-size:16px;color:#444;margin-top:14px;">Advantage Cleaning is built around the difference. Every disinfection job follows a six-step protocol, produces a digital report, and is inspected by a named supervisor before sign-off. If there&rsquo;s an audit, a compliance question, or a liability question &mdash; you have the records.</p>
+  </div>
+</section>
+
+<!-- OUTCOME / PAIN GRID -->
+<section style="padding:64px 30px;background:#fff;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:36px;">What Documented Disinfection Delivers</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div style="background:#f0f8f0;border:1px solid #c3e6c3;border-radius:8px;padding:28px;">
+        <h3 style="color:#2d7a27;font-size:16px;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;">What protocol-based disinfection delivers</h3>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>A defensible record.</strong> Digital report with zone-by-zone inspection scores. Available if there&rsquo;s an audit, a health department inquiry, or a liability question.</li>
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>Verified pathogen elimination.</strong> Dwell times followed. Disinfectant concentration confirmed. Supervisor sign-off before the building opens.</li>
+          <li style="padding:10px 0;border-bottom:1px solid #d4edda;font-size:15px;color:#1a1a2e;"><strong>Full surface coverage.</strong> Electrostatic spraying reaches sides, undersides, and overhead surfaces that manual application misses.</li>
+          <li style="padding:10px 0;font-size:15px;color:#1a1a2e;"><strong>No disruption to operations.</strong> Scheduled after hours, on your timeline. We coordinate. You don&rsquo;t manage it.</li>
+        </ul>
+      </div>
+      <div style="background:#fff5f5;border:1px solid #f5c6c6;border-radius:8px;padding:28px;">
+        <h3 style="color:#c0392b;font-size:16px;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;">What inadequate disinfection costs</h3>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">No documentation to produce when a health review asks for it</li>
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">Surfaces treated but not effective &mdash; dwell time skipped, wrong concentration, incomplete coverage</li>
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">Liability exposure when a facility event occurs and there&rsquo;s no service record to point to</li>
+          <li style="padding:10px 0;border-bottom:1px solid #f5c6c6;font-size:15px;color:#1a1a2e;">Vendor accountability gaps &mdash; the FM carries the risk that should belong to the cleaning operator</li>
+          <li style="padding:10px 0;font-size:15px;color:#1a1a2e;">Re-treatment costs when the first application wasn&rsquo;t effective</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section style="padding:64px 30px;background:#f0f2f5;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p class="section-eyebrow">Facilities We Serve</p>
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:12px;">Commercial Disinfection Across NYC and the Tri-State Area</h2>
+    <p style="font-size:16px;color:#444;margin-bottom:40px;max-width:720px;">We serve commercial facilities across all five boroughs and the tri-state area. Every facility type gets a protocol tailored to its surface types, occupancy schedule, and risk profile.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <div style="width:40px;height:40px;background:var(--accent-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e4ca1" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+        </div>
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:10px;">Office Buildings &amp; Corporate</h3>
+        <p style="font-size:14px;color:#555;margin:0;">High-touch surfaces in reception, conference rooms, shared workstations, and common areas. Scheduled after hours &mdash; no disruption to operations.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <div style="width:40px;height:40px;background:var(--accent-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e4ca1" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:10px;">Schools &amp; Educational Facilities</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Classrooms, cafeterias, restrooms, gyms. Staff GBAC-certified to handle emerging pathogens and correct chemical usage. A 3-campus Brooklyn child development school network has relied on us for recurring disinfection service.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <div style="width:40px;height:40px;background:var(--accent-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e4ca1" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+        </div>
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:10px;">Healthcare &amp; Medical Facilities</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Clinical environments require more than standard protocols. Hospital-grade EPA-registered disinfectants with documented dwell times &mdash; the evidence your facility review will require.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <div style="width:40px;height:40px;background:var(--accent-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e4ca1" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:10px;">Industrial &amp; Warehouse Facilities</h3>
+        <p style="font-size:14px;color:#555;margin:0;">High-volume facilities with complex surface types. Electrostatic spraying reaches equipment surfaces, racking systems, and hard-to-access areas that manual application misses.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <div style="width:40px;height:40px;background:var(--accent-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e4ca1" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+        </div>
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:10px;">Post-Construction Projects</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Construction debris carries pathogens. Final disinfection before handover ensures the space is not just clean &mdash; it&rsquo;s documented safe for occupancy.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <div style="width:40px;height:40px;background:var(--accent-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e4ca1" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </div>
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:10px;">Retail &amp; Commercial Spaces</h3>
+        <p style="font-size:14px;color:#555;margin:0;">Foot traffic drives surface contamination. Regular disinfection cycles, timed to your operational schedule, with a digital report after every visit.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6-STEP PROCESS -->
+<section style="padding:72px 30px;background:#fff;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p class="section-eyebrow">Our Process</p>
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:12px;">Our 6-Step Disinfection Process</h2>
+    <p style="font-size:16px;color:#444;margin-bottom:48px;max-width:720px;">A systematic approach. Every step produces a documented output. Nothing is skipped.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:#f0f2f5;border-radius:8px;border:1px solid var(--border);overflow:hidden;">
+        <div style="background:#0b2545;padding:20px 24px;display:flex;align-items:center;gap:14px;">
+          <span style="width:32px;height:32px;background:#1e4ca1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;">1</span>
+          <div>
+            <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7da4d8;text-transform:uppercase;">Step 1</span>
+            <h3 style="color:#fff;font-size:17px;margin-top:2px;">Assess &amp; Plan</h3>
+          </div>
+        </div>
+        <div style="padding:22px;">
+          <p style="font-size:14px;color:#333;margin-bottom:14px;">We assess your facility: high-touch surfaces, traffic patterns, specific risk areas. From that, we produce a written disinfection plan and scope of work before anything starts. You know exactly what will be covered and how.</p>
+          <div style="background:#e8edf8;border-radius:6px;padding:10px 14px;">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e4ca1;">Deliverable</span>
+            <p style="font-size:13px;color:#333;margin:4px 0 0;">Disinfection Plan &amp; Scope</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#f0f2f5;border-radius:8px;border:1px solid var(--border);overflow:hidden;">
+        <div style="background:#0b2545;padding:20px 24px;display:flex;align-items:center;gap:14px;">
+          <span style="width:32px;height:32px;background:#1e4ca1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;">2</span>
+          <div>
+            <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7da4d8;text-transform:uppercase;">Step 2</span>
+            <h3 style="color:#fff;font-size:17px;margin-top:2px;">Prepare the Area</h3>
+          </div>
+        </div>
+        <div style="padding:22px;">
+          <p style="font-size:14px;color:#333;margin-bottom:14px;">Our team prepares the space &mdash; removing debris, organising surfaces, identifying high-touch contact points for priority treatment. No disinfection starts until the area is ready.</p>
+          <div style="background:#e8edf8;border-radius:6px;padding:10px 14px;">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e4ca1;">Deliverable</span>
+            <p style="font-size:13px;color:#333;margin:4px 0 0;">Ready-to-Disinfect Environment</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#f0f2f5;border-radius:8px;border:1px solid var(--border);overflow:hidden;">
+        <div style="background:#0b2545;padding:20px 24px;display:flex;align-items:center;gap:14px;">
+          <span style="width:32px;height:32px;background:#1e4ca1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;">3</span>
+          <div>
+            <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7da4d8;text-transform:uppercase;">Step 3</span>
+            <h3 style="color:#fff;font-size:17px;margin-top:2px;">Disinfect Systematically</h3>
+          </div>
+        </div>
+        <div style="padding:22px;">
+          <p style="font-size:14px;color:#333;margin-bottom:14px;">We use hospital-grade EPA-registered disinfectants and electrostatic spraying technology to treat all surfaces &mdash; including overhead and side-facing surfaces that spray-only methods miss. Every zone treated in sequence. Nothing skipped.</p>
+          <div style="background:#e8edf8;border-radius:6px;padding:10px 14px;">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e4ca1;">Deliverable</span>
+            <p style="font-size:13px;color:#333;margin:4px 0 0;">Thorough Surface Disinfection</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#f0f2f5;border-radius:8px;border:1px solid var(--border);overflow:hidden;">
+        <div style="background:#0b2545;padding:20px 24px;display:flex;align-items:center;gap:14px;">
+          <span style="width:32px;height:32px;background:#1e4ca1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;">4</span>
+          <div>
+            <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7da4d8;text-transform:uppercase;">Step 4</span>
+            <h3 style="color:#fff;font-size:17px;margin-top:2px;">Dwell Time &amp; Effectiveness</h3>
+          </div>
+        </div>
+        <div style="padding:22px;">
+          <p style="font-size:14px;color:#333;margin-bottom:14px;">The disinfectant works during contact time &mdash; not after it&rsquo;s wiped away. We follow the dwell times specified for each product against the target pathogens. The disinfectant stays on the surface long enough to be effective. That step is what most vendors skip.</p>
+          <div style="background:#e8edf8;border-radius:6px;padding:10px 14px;">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e4ca1;">Deliverable</span>
+            <p style="font-size:13px;color:#333;margin:4px 0 0;">Maximum Pathogen Elimination</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#f0f2f5;border-radius:8px;border:1px solid var(--border);overflow:hidden;">
+        <div style="background:#0b2545;padding:20px 24px;display:flex;align-items:center;gap:14px;">
+          <span style="width:32px;height:32px;background:#1e4ca1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;">5</span>
+          <div>
+            <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7da4d8;text-transform:uppercase;">Step 5</span>
+            <h3 style="color:#fff;font-size:17px;margin-top:2px;">Inspect &amp; Quality Check</h3>
+          </div>
+        </div>
+        <div style="padding:22px;">
+          <p style="font-size:14px;color:#333;margin-bottom:14px;">A supervisor performs a detailed inspection of every treated area before sign-off. Every zone is scored on a 1&ndash;5 scale using our Quality Checklist. If a surface doesn&rsquo;t pass &mdash; it&rsquo;s treated again.</p>
+          <div style="background:#e8edf8;border-radius:6px;padding:10px 14px;">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e4ca1;">Deliverable</span>
+            <p style="font-size:13px;color:#333;margin:4px 0 0;">Inspection Score &amp; Report</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#f0f2f5;border-radius:8px;border:1px solid var(--border);overflow:hidden;">
+        <div style="background:#0b2545;padding:20px 24px;display:flex;align-items:center;gap:14px;">
+          <span style="width:32px;height:32px;background:#1e4ca1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;">6</span>
+          <div>
+            <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7da4d8;text-transform:uppercase;">Step 6</span>
+            <h3 style="color:#fff;font-size:17px;margin-top:2px;">Report &amp; Follow Up</h3>
+          </div>
+        </div>
+        <div style="padding:22px;">
+          <p style="font-size:14px;color:#333;margin-bottom:14px;">You receive a digital report with scores, photos where applicable, and any recommendations for follow-up. We follow up to confirm there are no outstanding issues.</p>
+          <div style="background:#e8edf8;border-radius:6px;padding:10px 14px;">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e4ca1;">Deliverable</span>
+            <p style="font-size:13px;color:#333;margin:4px 0 0;">Digital Report &amp; Recommendations</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY ADVANTAGE CLEANING -->
+<section style="padding:72px 30px;background:#f0f2f5;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p class="section-eyebrow">Why Advantage Cleaning</p>
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:40px;">Why Facility Managers Choose Advantage Cleaning for Disinfection</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:12px;">Advanced Disinfection Technology</h3>
+        <p style="font-size:15px;color:#444;">Electrostatic spraying wraps charged disinfectant particles around surfaces &mdash; including sides and undersides &mdash; at a coverage rate and consistency that manual spraying cannot match. Combined with UVC light treatment in enclosed spaces, it&rsquo;s the same technology used in healthcare environments. A Manhattan hotel used both methods across guest rooms and public areas during peak pandemic demand. Their general manager &mdash; with 12 years of cleaning vendor experience &mdash; called it the best in the business.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:12px;">Hospital-Grade, EPA-Registered Disinfectants</h3>
+        <p style="font-size:15px;color:#444;">Every product we use is EPA-registered and effective against the target pathogen category for the facility type. No generic products, no substitutions. Product documentation is available on request.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:12px;">Dwell Time Compliance</h3>
+        <p style="font-size:15px;color:#444;">A disinfectant that&rsquo;s wiped away before it&rsquo;s had time to work is not disinfection. Our technicians are trained to hold dwell times &mdash; and the supervisor verifies it. This is not standard practice in the industry. It is our standard practice.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:12px;">GBAC-Certified Team</h3>
+        <p style="font-size:15px;color:#444;">Our staff hold GBAC certification &mdash; the internationally recognised standard for cleaning professionals trained in biohazard remediation and pathogen management. A Brooklyn school network specifically cited it as a key reason they chose us, after going through countless providers before finding the right fit.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:12px;">Quality Assurance System</h3>
+        <p style="font-size:15px;color:#444;">Every job is inspected by a supervisor, scored zone-by-zone, and documented in a digital report. The kind of documentation that answers a facilities review, a compliance question, or a health department inquiry. You get proof &mdash; not a promise.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;border:1px solid var(--border);padding:28px;">
+        <h3 style="font-size:17px;color:#0b2545;margin-bottom:12px;">Customised to Your Facility</h3>
+        <p style="font-size:15px;color:#444;">Frequency, scope, product selection, and reporting are tailored to your facility type and operational schedule. A charter school network runs differently than a warehouse. We account for that before anything starts.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE ADVANTAGE DIFFERENCE -->
+<section style="background:#0b2545;padding:56px 30px;">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <p style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7da4d8;margin-bottom:16px;">The Advantage Difference</p>
+    <h2 style="font-size:clamp(24px,3.5vw,40px);color:#fff;margin-bottom:20px;">Documented. Defensible. Dependable.</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,.8);max-width:640px;margin:0 auto;">Our process produces documentation and a defensible record of every disinfection event &mdash; the kind that satisfies audits, compliance reviews, and operational excellence requirements. Not because we&rsquo;re asked to. Because that&rsquo;s how the system is built.</p>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section style="padding:56px 30px;background:#fff;">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <p class="section-eyebrow">Service Area</p>
+    <h2 style="font-size:clamp(20px,2.5vw,28px);color:#0b2545;margin-bottom:24px;">Serving All 5 NYC Boroughs and the Tri-State Area</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Manhattan</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Brooklyn</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Queens</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">The Bronx</span>
+      <span style="background:#e8edf8;border:1px solid #c5d0e8;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:600;color:#0b2545;">Staten Island</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:500;color:#444;">Jersey City, NJ</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:500;color:#444;">Newark, NJ</span>
+      <span style="background:#f0f2f5;border:1px solid #dde3f0;padding:8px 18px;border-radius:40px;font-size:14px;font-weight:500;color:#444;">Stamford, CT</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:72px 30px;background:#f0f2f5;">
+  <div style="max-width:800px;margin:0 auto;">
+    <p class="section-eyebrow">FAQ</p>
+    <h2 style="font-size:clamp(22px,3vw,32px);color:#0b2545;margin-bottom:40px;">Questions Facility Managers Ask</h2>
+
+    <div style="display:flex;flex-direction:column;gap:16px;">
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What is the difference between cleaning and disinfection?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Cleaning removes visible dirt and debris. Disinfection uses EPA-registered chemical agents &mdash; applied at the correct concentration and left for a required dwell time &mdash; to eliminate pathogens on treated surfaces. The two are separate processes. Our disinfection service follows both steps, in sequence, with documentation after each job.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What technology do you use for disinfection?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Electrostatic spraying and hospital-grade EPA-registered disinfectants. Electrostatic sprayers charge disinfectant particles so they wrap around surfaces &mdash; including sides and undersides &mdash; giving consistent coverage across complex surfaces. For enclosed spaces, UVC light treatment is also available.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What documentation do you provide after a disinfection job?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">A digital report with inspection scores for each treated zone, photos where applicable, and any follow-up recommendations. Inspection records are available on demand. If there&rsquo;s a compliance review or health department inquiry, you have the records.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What does GBAC-certified mean?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">GBAC (Global Biorisk Advisory Council) is an internationally recognised certification for cleaning professionals trained in biohazard remediation and pathogen management. Our staff hold this certification &mdash; it covers correct chemical usage, pathogen response protocols, and outbreak prevention procedures.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">Do you handle emergency disinfection?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Yes. We respond to emergency situations including biohazard incidents, spills, and facility events requiring immediate remediation. Contact us directly at 718-701-6806.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">What types of facilities do you disinfect?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Office buildings, schools and educational facilities, healthcare and medical facilities, industrial and warehouse facilities, post-construction projects, and retail and commercial spaces across New York City and the tri-state area.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">How do you determine the right disinfection protocol for my facility?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">We assess your facility before any work starts &mdash; surface types, traffic patterns, occupancy schedules, and specific risk areas. From that assessment, we produce a written disinfection plan. The protocol, product selection, and frequency are matched to your specific facility type.</p>
+      </details>
+
+      <details style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px;">
+        <summary style="font-size:16px;font-weight:700;color:#0b2545;cursor:pointer;list-style:none;">Can disinfection be integrated with an ongoing janitorial programme?</summary>
+        <p style="font-size:15px;color:#444;margin-top:14px;">Yes. Most of our commercial clients run disinfection as part of a broader facility maintenance programme &mdash; daily or nightly janitorial service, with scheduled disinfection cycles at a defined frequency. One programme, one point of contact, one quality system across all services.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Get a Cleaner, Safer Environment Today</h2>
+  <p>We assess your facility, deliver a written disinfection scope, and provide a documented result after every job. Serving NYC, NJ &amp; CT.</p>
+  <a href="#" class="btn-white">Request a Disinfection Assessment</a>
+  <p style="margin-top:12px;font-size:14px;opacity:.8;">Call 718-701-6806 &middot; info@advantagecleaning.nyc &middot; advantagecleaning.nyc</p>
+</div>
+</div><!-- /disinfection-services page -->
+
+<!-- ==================== DAY PORTER SERVICES PAGE ==================== -->
+</body>
+</html>
