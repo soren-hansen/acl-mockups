@@ -221,126 +221,136 @@ body{padding-top:108px;}
 <body>
 </div>
 
-<!-- ═══ HERO VARIANT 1: Light Split Layout ═══ -->
-<div style="background:#1e4fa0;color:#fff;padding:8px 20px;font-weight:bold;font-family:monospace;font-size:13px">▶ HERO VARIANT 1 — Light Split Layout</div>
+<!-- ═══ HERO VARIANT 4: Light Split ═══ -->
+<div style="background:#1e4fa0;color:#fff;padding:8px 20px;font-weight:bold;font-family:monospace;font-size:13px">▶ HERO VARIANT 4 — Light Split</div>
 <style>
-/* ===== VARIANT 1 — Light Split Layout ===== */
-.h1v-hero{display:flex;min-height:560px;}
-.h1v-content{flex:0 0 60%;background:#fff;padding:72px 56px 72px 40px;display:flex;flex-direction:column;justify-content:center;}
-.h1v-photo{flex:0 0 40%;background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;}
-.h1v-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#1e4fa0;text-transform:uppercase;margin-bottom:14px;}
-.h1v-h1{font-size:clamp(26px,3.2vw,44px);font-weight:800;color:#0b2545;margin-bottom:14px;line-height:1.15;}
-.h1v-h1 mark{background:transparent;color:#469240;}
-.h1v-tagline{font-size:16px;color:#444;margin-bottom:26px;max-width:560px;line-height:1.65;}
-.h1v-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
-.h1v-badge{display:flex;align-items:center;gap:7px;background:#f0f4fb;border:1px solid #dde6f5;padding:7px 13px;border-radius:40px;font-size:12px;color:#0b2545;font-weight:500;}
-.h1v-badge svg{color:#1e4fa0;opacity:.9;}
-.h1v-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.h1v-btn-primary{background:#469240;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
-.h1v-btn-primary:hover{background:#357a2f;text-decoration:none!important;}
-.h1v-btn-secondary{background:transparent;color:#0b2545!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid #0b2545;}
-.h1v-btn-secondary:hover{background:#0b2545;color:#fff!important;text-decoration:none!important;}
-@media(max-width:768px){.h1v-hero{flex-direction:column;}.h1v-content{flex:none;padding:48px 24px;}.h1v-photo{flex:none;height:260px;}}
+/* ===== VARIANT 4 — Light Split ===== */
+.h4v-hero{display:flex;min-height:560px;overflow:hidden;}
+.h4v-content{flex:0 0 55%;background:#f4f8fa;padding:80px 64px 80px 48px;display:flex;flex-direction:column;justify-content:center;}
+.h4v-photo{flex:0 0 45%;background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;}
+.h4v-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#1e4fa0;text-transform:uppercase;margin-bottom:16px;}
+.h4v-h1{font-size:clamp(28px,3.4vw,48px);font-weight:800;color:#0b2545;margin-bottom:16px;line-height:1.12;}
+.h4v-h1 mark{background:transparent;color:#469240;}
+.h4v-tagline{font-size:16px;color:#4a5568;margin-bottom:28px;max-width:540px;line-height:1.7;}
+.h4v-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.h4v-badge{display:flex;align-items:center;gap:7px;background:#fff;border:1.5px solid #b8cceb;padding:7px 14px;border-radius:40px;font-size:12px;color:#0b2545;font-weight:500;}
+.h4v-badge svg{color:#1e4fa0;opacity:.85;}
+.h4v-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.h4v-btn-primary{background:#469240;color:#fff!important;padding:13px 28px;border-radius:4px;font-weight:700;font-size:15px;display:inline-block;box-shadow:0 2px 8px rgba(70,146,64,.28);}
+.h4v-btn-primary:hover{background:#357a2f;text-decoration:none!important;box-shadow:0 4px 14px rgba(70,146,64,.38);}
+.h4v-btn-secondary{background:transparent;color:#0b2545!important;padding:13px 28px;border-radius:4px;font-weight:600;font-size:15px;display:inline-block;border:2px solid #0b2545;}
+.h4v-btn-secondary:hover{background:#0b2545;color:#fff!important;text-decoration:none!important;}
+.h4v-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:28px;border-top:1px solid #dde3ed;}
+.h4v-stat{display:flex;flex-direction:column;}
+.h4v-stat-num{font-size:22px;font-weight:800;color:#0b2545;line-height:1;}
+.h4v-stat-label{font-size:12px;color:#6b7a90;margin-top:4px;font-weight:500;}
+@media(max-width:900px){.h4v-hero{flex-direction:column;}.h4v-content{flex:none;padding:52px 28px;}.h4v-photo{flex:none;height:280px;}}
 </style>
-<div class="h1v-hero">
-  <div class="h1v-content">
-    <p class="h1v-eyebrow">Office Cleaning Services &middot; NYC &middot; NJ &middot; CT</p>
-    <h1 class="h1v-h1">Office Cleaning Services With Documented Quality &mdash;<br><mark>For Every Building Type</mark></h1>
-    <p class="h1v-tagline">For Directors of Facilities and Corporate Property Managers who need verified records, consistent standards across every floor, and a single point of accountability. From professional offices to Class A towers and corporate campuses.</p>
-    <div class="h1v-badges">
-      <div class="h1v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
-      <div class="h1v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
-      <div class="h1v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
-      <div class="h1v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
+<div class="h4v-hero">
+  <div class="h4v-content">
+    <p class="h4v-eyebrow">Office Cleaning Services &middot; NYC &middot; NJ &middot; CT</p>
+    <h1 class="h4v-h1">Office Cleaning Services With Documented Quality &mdash;<br><mark>For Every Building Type</mark></h1>
+    <p class="h4v-tagline">For Directors of Facilities and Corporate Property Managers who need verified records, consistent standards across every floor, and a single point of accountability. From professional offices to Class A towers and corporate campuses.</p>
+    <div class="h4v-badges">
+      <div class="h4v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
+      <div class="h4v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
+      <div class="h4v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
+      <div class="h4v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
     </div>
-    <div class="h1v-btns"><a href="#" class="h1v-btn-primary">Request a Facility Assessment</a><a href="#" class="h1v-btn-secondary">Our Quality System</a></div>
+    <div class="h4v-btns"><a href="#" class="h4v-btn-primary">Request a Facility Assessment</a><a href="#" class="h4v-btn-secondary">Our Quality System</a></div>
+    <div class="h4v-stats">
+      <div class="h4v-stat"><span class="h4v-stat-num">20+</span><span class="h4v-stat-label">Years in NYC &amp; NJ</span></div>
+      <div class="h4v-stat"><span class="h4v-stat-num">500+</span><span class="h4v-stat-label">Client Buildings</span></div>
+      <div class="h4v-stat"><span class="h4v-stat-num">GBAC</span><span class="h4v-stat-label">Certified Standard</span></div>
+    </div>
   </div>
-  <div class="h1v-photo" role="img" aria-label="Office cleaning in Manhattan office building"></div>
+  <div class="h4v-photo" role="img" aria-label="Office cleaning in Manhattan office building"></div>
 </div>
 
-<!-- ═══ HERO VARIANT 2: Soft Blue Gradient ═══ -->
-<div style="background:#1e4fa0;color:#fff;padding:8px 20px;font-weight:bold;font-family:monospace;font-size:13px">▶ HERO VARIANT 2 — Soft Blue Gradient</div>
+<!-- ═══ HERO VARIANT 5: Contained Card Hero ═══ -->
+<div style="background:#1e4fa0;color:#fff;padding:8px 20px;font-weight:bold;font-family:monospace;font-size:13px">▶ HERO VARIANT 5 — Contained Card Hero</div>
 <style>
-/* ===== VARIANT 2 — Soft Blue Gradient ===== */
-.h2v-hero{background:linear-gradient(135deg,#e8f0fb 0%,#c8d9f5 100%);padding:80px 30px;}
-.h2v-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:60px;}
-.h2v-text{flex:1;min-width:0;}
-.h2v-photo-wrap{flex:0 0 420px;}
-.h2v-photo-card{border-radius:12px;overflow:hidden;box-shadow:0 8px 40px rgba(11,37,69,.18);}
-.h2v-photo-card img{width:100%;height:380px;object-fit:cover;display:block;}
-.h2v-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#1e4fa0;text-transform:uppercase;margin-bottom:14px;}
-.h2v-h1{font-size:clamp(26px,3.2vw,44px);font-weight:800;color:#0b2545;margin-bottom:14px;line-height:1.15;}
-.h2v-h1 mark{background:transparent;color:#469240;}
-.h2v-tagline{font-size:16px;color:#344;margin-bottom:28px;max-width:560px;line-height:1.65;}
-.h2v-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
-.h2v-badge{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.7);border:1px solid rgba(30,79,160,.2);padding:7px 13px;border-radius:40px;font-size:12px;color:#0b2545;font-weight:500;}
-.h2v-badge svg{color:#1e4fa0;opacity:.9;}
-.h2v-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.h2v-btn-primary{background:#469240;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
-.h2v-btn-primary:hover{background:#357a2f;text-decoration:none!important;}
-.h2v-btn-secondary{background:transparent;color:#0b2545!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(11,37,69,.4);}
-.h2v-btn-secondary:hover{background:#0b2545;color:#fff!important;text-decoration:none!important;}
-@media(max-width:900px){.h2v-inner{flex-direction:column;}.h2v-photo-wrap{flex:none;width:100%;}}
+/* ===== VARIANT 5 — Contained Card Hero ===== */
+.h5v-wrap{background:#fff;padding:24px;}
+.h5v-card{background:linear-gradient(135deg,#e8f1fb 0%,#d0e3f7 100%);border-radius:16px;overflow:hidden;padding:64px 56px;display:flex;align-items:center;gap:56px;min-height:480px;}
+.h5v-text{flex:1;min-width:0;}
+.h5v-photo-wrap{flex:0 0 420px;}
+.h5v-photo-inset{border-radius:12px;overflow:hidden;box-shadow:0 12px 48px rgba(11,37,69,.22);}
+.h5v-photo-inset img{width:100%;height:360px;object-fit:cover;display:block;}
+.h5v-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#1e4fa0;text-transform:uppercase;margin-bottom:16px;}
+.h5v-h1{font-size:clamp(26px,3vw,44px);font-weight:800;color:#0b2545;margin-bottom:16px;line-height:1.15;}
+.h5v-h1 mark{background:transparent;color:#469240;}
+.h5v-tagline{font-size:16px;color:#3a4a5c;margin-bottom:28px;max-width:520px;line-height:1.7;}
+.h5v-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.h5v-badge{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.75);border:1px solid rgba(30,79,160,.25);padding:7px 14px;border-radius:40px;font-size:12px;color:#0b2545;font-weight:500;backdrop-filter:blur(4px);}
+.h5v-badge svg{color:#1e4fa0;opacity:.9;}
+.h5v-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.h5v-btn-primary{background:#469240;color:#fff!important;padding:13px 28px;border-radius:6px;font-weight:700;font-size:15px;display:inline-block;box-shadow:0 2px 10px rgba(70,146,64,.3);}
+.h5v-btn-primary:hover{background:#357a2f;text-decoration:none!important;}
+.h5v-btn-secondary{background:rgba(255,255,255,.6);color:#0b2545!important;padding:13px 28px;border-radius:6px;font-weight:600;font-size:15px;display:inline-block;border:1.5px solid rgba(11,37,69,.3);backdrop-filter:blur(4px);}
+.h5v-btn-secondary:hover{background:#fff;text-decoration:none!important;}
+@media(max-width:1000px){.h5v-card{flex-direction:column;padding:48px 32px;gap:36px;}.h5v-photo-wrap{flex:none;width:100%;}}
+@media(max-width:600px){.h5v-wrap{padding:12px;}.h5v-card{padding:36px 20px;}}
 </style>
-<div class="h2v-hero">
-  <div class="h2v-inner">
-    <div class="h2v-text">
-      <p class="h2v-eyebrow">Office Cleaning Services &middot; NYC &middot; NJ &middot; CT</p>
-      <h1 class="h2v-h1">Office Cleaning Services With Documented Quality &mdash;<br><mark>For Every Building Type</mark></h1>
-      <p class="h2v-tagline">For Directors of Facilities and Corporate Property Managers who need verified records, consistent standards across every floor, and a single point of accountability. From professional offices to Class A towers and corporate campuses.</p>
-      <div class="h2v-badges">
-        <div class="h2v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
-        <div class="h2v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
-        <div class="h2v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
-        <div class="h2v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
+<div class="h5v-wrap">
+  <div class="h5v-card">
+    <div class="h5v-text">
+      <p class="h5v-eyebrow">Office Cleaning Services &middot; NYC &middot; NJ &middot; CT</p>
+      <h1 class="h5v-h1">Office Cleaning Services With Documented Quality &mdash;<br><mark>For Every Building Type</mark></h1>
+      <p class="h5v-tagline">For Directors of Facilities and Corporate Property Managers who need verified records, consistent standards across every floor, and a single point of accountability. From professional offices to Class A towers and corporate campuses.</p>
+      <div class="h5v-badges">
+        <div class="h5v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
+        <div class="h5v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
+        <div class="h5v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
+        <div class="h5v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
       </div>
-      <div class="h2v-btns"><a href="#" class="h2v-btn-primary">Request a Facility Assessment</a><a href="#" class="h2v-btn-secondary">Our Quality System</a></div>
+      <div class="h5v-btns"><a href="#" class="h5v-btn-primary">Request a Facility Assessment</a><a href="#" class="h5v-btn-secondary">Our Quality System</a></div>
     </div>
-    <div class="h2v-photo-wrap">
-      <div class="h2v-photo-card">
+    <div class="h5v-photo-wrap">
+      <div class="h5v-photo-inset">
         <img src="https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp" alt="Office cleaning in Manhattan office building" loading="eager">
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ HERO VARIANT 3: Frosted / Reduced Overlay ═══ -->
-<div style="background:#1e4fa0;color:#fff;padding:8px 20px;font-weight:bold;font-family:monospace;font-size:13px">▶ HERO VARIANT 3 — Frosted / Reduced Overlay</div>
+<!-- ═══ HERO VARIANT 6: Accent Panel Split ═══ -->
+<div style="background:#1e4fa0;color:#fff;padding:8px 20px;font-weight:bold;font-family:monospace;font-size:13px">▶ HERO VARIANT 6 — Accent Panel Split</div>
 <style>
-/* ===== VARIANT 3 — Frosted / Reduced Overlay ===== */
-.h3v-hero{background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;position:relative;padding:100px 30px 80px;}
-.h3v-hero::before{content:'';position:absolute;inset:0;background:rgba(11,37,69,0.35);}
-.h3v-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;max-width:720px;}
-.h3v-glass{background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:48px 44px;}
-.h3v-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#b8d4f8;text-transform:uppercase;margin-bottom:14px;}
-.h3v-h1{font-size:clamp(26px,3.5vw,46px);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.15;}
-.h3v-h1 mark{background:transparent;color:#7ee87a;}
-.h3v-tagline{font-size:16px;color:rgba(255,255,255,.92);margin-bottom:26px;max-width:600px;line-height:1.65;}
-.h3v-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
-.h3v-badge{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);padding:7px 13px;border-radius:40px;font-size:12px;color:#fff;font-weight:500;}
-.h3v-badge svg{opacity:.85;}
-.h3v-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.h3v-btn-primary{background:#469240;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:700;font-size:15px;display:inline-block;}
-.h3v-btn-primary:hover{background:#357a2f;text-decoration:none!important;}
-.h3v-btn-secondary{background:transparent;color:#fff!important;padding:13px 26px;border-radius:2px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(255,255,255,.6);}
-.h3v-btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,.1);text-decoration:none!important;}
-@media(max-width:768px){.h3v-glass{padding:32px 24px;}}
+/* ===== VARIANT 6 — Accent Panel Split ===== */
+.h6v-hero{display:flex;min-height:540px;overflow:hidden;position:relative;}
+.h6v-left{flex:0 0 50%;background:#0b2545;padding:80px 60px 80px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;clip-path:polygon(0 0, 100% 0, 92% 100%, 0 100%);}
+.h6v-right{flex:1;background-image:url('https://staging-advantagecleaningllc.kinsta.cloud/wp-content/uploads/2026/04/Office-cleaning-in-Manhattan-office-building-on-Manhattan.webp');background-size:cover;background-position:center;margin-left:-6%;}
+.h6v-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;}
+.h6v-eyebrow span{color:#7ee87a;}
+.h6v-eyebrow em{color:rgba(255,255,255,.55);font-style:normal;}
+.h6v-h1{font-size:clamp(26px,3.2vw,46px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.13;}
+.h6v-h1 mark{background:transparent;color:#7ee87a;}
+.h6v-tagline{font-size:15px;color:rgba(255,255,255,.82);margin-bottom:28px;max-width:480px;line-height:1.7;}
+.h6v-badges{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px;}
+.h6v-badge{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:40px;font-size:12px;color:#fff;font-weight:500;}
+.h6v-badge svg{opacity:.8;color:#fff;}
+.h6v-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.h6v-btn-primary{background:#469240;color:#fff!important;padding:13px 28px;border-radius:4px;font-weight:700;font-size:15px;display:inline-block;box-shadow:0 2px 10px rgba(70,146,64,.4);}
+.h6v-btn-primary:hover{background:#357a2f;text-decoration:none!important;}
+.h6v-btn-secondary{background:transparent;color:#fff!important;padding:13px 28px;border-radius:4px;font-weight:600;font-size:15px;display:inline-block;border:2px solid rgba(255,255,255,.5);}
+.h6v-btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,.1);text-decoration:none!important;}
+@media(max-width:900px){.h6v-hero{flex-direction:column;}.h6v-left{flex:none;clip-path:none;padding:52px 28px;margin:0;}.h6v-right{flex:none;height:260px;margin:0;}}
 </style>
-<div class="h3v-hero">
-  <div class="h3v-inner">
-    <div class="h3v-glass">
-      <p class="h3v-eyebrow">Office Cleaning Services &middot; NYC &middot; NJ &middot; CT</p>
-      <h1 class="h3v-h1">Office Cleaning Services With Documented Quality &mdash;<br><mark>For Every Building Type</mark></h1>
-      <p class="h3v-tagline">For Directors of Facilities and Corporate Property Managers who need verified records, consistent standards across every floor, and a single point of accountability. From professional offices to Class A towers and corporate campuses.</p>
-      <div class="h3v-badges">
-        <div class="h3v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
-        <div class="h3v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
-        <div class="h3v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
-        <div class="h3v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
-      </div>
-      <div class="h3v-btns"><a href="#" class="h3v-btn-primary">Request a Facility Assessment</a><a href="#" class="h3v-btn-secondary">Our Quality System</a></div>
+<div class="h6v-hero">
+  <div class="h6v-left">
+    <p class="h6v-eyebrow"><span>Office Cleaning Services</span> <em>&middot; NYC &middot; NJ &middot; CT</em></p>
+    <h1 class="h6v-h1">Office Cleaning Services With Documented Quality &mdash;<br><mark>For Every Building Type</mark></h1>
+    <p class="h6v-tagline">For Directors of Facilities and Corporate Property Managers who need verified records, consistent standards across every floor, and a single point of accountability. From professional offices to Class A towers and corporate campuses.</p>
+    <div class="h6v-badges">
+      <div class="h6v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>Supervisor-verified every shift</div>
+      <div class="h6v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Weekly KPI reports</div>
+      <div class="h6v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>Single point of contact</div>
+      <div class="h6v-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Green cleaning by default</div>
     </div>
+    <div class="h6v-btns"><a href="#" class="h6v-btn-primary">Request a Facility Assessment</a><a href="#" class="h6v-btn-secondary">Our Quality System</a></div>
   </div>
+  <div class="h6v-right" role="img" aria-label="Office cleaning in Manhattan office building"></div>
 </div>
 <div class="locations-bar"><div class="inner"><strong>Locations We Serve:</strong><a href="#" class="loc-link">&#128205; New York</a><a href="#" class="loc-link">&#128205; New Jersey</a><a href="#" class="loc-link">&#128205; Connecticut</a></div></div>
 <div class="trust-bar"><div class="inner">
