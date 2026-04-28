@@ -1,0 +1,195 @@
+<!--
+  THANK YOU PAGE — POST FORM SUBMISSION
+  URL: /thank-you-for-requesting-an-estimate/
+  Also covers: /thank-you-contact-us/
+  Persona: Director of Facilities / Property Manager who just submitted
+  Buyer state: Committed — reduce anxiety, set expectations, keep on site
+  CSS prefix: acl-ty-
+-->
+
+<style>
+.acl-ty-wrap *,.acl-ty-wrap *::before,.acl-ty-wrap *::after{box-sizing:border-box;margin:0;padding:0}
+.acl-ty-wrap{font-family:'Inter',system-ui,sans-serif;color:#1E293B;line-height:1.65;max-width:780px;margin:0 auto;padding:48px 24px 80px}
+
+/* CONFIRMATION HERO */
+.acl-ty-hero{text-align:center;padding:48px 24px 40px;background:linear-gradient(135deg,#0f1923 0%,#1B3A5C 100%);border-radius:14px;margin-bottom:40px}
+.acl-ty-check{width:72px;height:72px;background:rgba(63,185,80,.15);border:2px solid rgba(63,185,80,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.acl-ty-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#4ade80;margin-bottom:12px}
+.acl-ty-hero h1{font-size:clamp(22px,3vw,32px);font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-.5px;line-height:1.15}
+.acl-ty-hero p{font-size:16px;color:rgba(255,255,255,.75);max-width:520px;margin:0 auto}
+
+/* WHAT HAPPENS NEXT */
+.acl-ty-steps{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:32px;margin-bottom:28px}
+.acl-ty-steps h2{font-size:17px;font-weight:800;color:#1B3A5C;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.acl-ty-step-list{display:flex;flex-direction:column;gap:0}
+.acl-ty-step{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;padding-bottom:22px;position:relative}
+.acl-ty-step:not(:last-child)::before{content:'';position:absolute;left:23px;top:48px;bottom:0;width:2px;background:#E2E8F0}
+.acl-ty-step:last-child{padding-bottom:0}
+.acl-ty-step-num{width:48px;height:48px;border-radius:50%;background:#1B3A5C;color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;border:3px solid #fff;box-shadow:0 0 0 2px #1B3A5C}
+.acl-ty-step-body strong{display:block;font-size:15px;font-weight:700;color:#1E293B;margin-bottom:4px;padding-top:12px}
+.acl-ty-step-body p{font-size:14px;color:#64748B;line-height:1.6}
+.acl-ty-step-timing{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:#2E8B57;background:#ecfdf5;border:1px solid #d1fae5;padding:3px 10px;border-radius:20px;margin-top:6px}
+
+/* REASSURANCE */
+.acl-ty-reassure{background:#f2f5fb;border:1px solid #e8eef8;border-left:4px solid #1B3A5C;border-radius:0 10px 10px 0;padding:20px 24px;margin-bottom:28px;display:flex;gap:16px;align-items:flex-start}
+.acl-ty-reassure-icon{width:36px;height:36px;background:#1B3A5C;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+.acl-ty-reassure p{font-size:14.5px;color:#1E293B;line-height:1.7;font-style:italic}
+.acl-ty-reassure cite{font-size:12px;color:#64748B;font-style:normal;font-weight:600;display:block;margin-top:6px}
+
+/* DIRECT CONTACT */
+.acl-ty-contact{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:22px;margin-bottom:28px}
+.acl-ty-contact h3{font-size:14px;font-weight:700;color:#1E293B;margin-bottom:14px}
+.acl-ty-contact-items{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.acl-ty-contact-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #E2E8F0;border-radius:8px;text-decoration:none;transition:.15s}
+.acl-ty-contact-item:hover{border-color:#1B3A5C;background:#f2f5fb}
+.acl-ty-contact-icon{width:32px;height:32px;background:#f2f5fb;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#1B3A5C}
+.acl-ty-contact-item strong{display:block;font-size:13.5px;font-weight:700;color:#1B3A5C}
+.acl-ty-contact-item span{font-size:12px;color:#64748B}
+
+/* WHAT TO PREPARE */
+.acl-ty-prepare{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:22px;margin-bottom:28px}
+.acl-ty-prepare h3{font-size:14px;font-weight:700;color:#1E293B;margin-bottom:12px}
+.acl-ty-prepare-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.acl-ty-prepare-list li{font-size:13.5px;color:#1E293B;padding:6px 0 6px 18px;position:relative;border-bottom:1px solid #f1f5f9}
+.acl-ty-prepare-list li:last-child,.acl-ty-prepare-list li:nth-last-child(2){border-bottom:none}
+.acl-ty-prepare-list li::before{content:'→';position:absolute;left:0;color:#2E8B57;font-weight:700}
+
+/* RELATED LINKS */
+.acl-ty-links{margin-bottom:28px}
+.acl-ty-links h3{font-size:14px;font-weight:700;color:#1E293B;margin-bottom:12px}
+.acl-ty-link-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.acl-ty-link-card{background:#fff;border:1px solid #E2E8F0;border-radius:8px;padding:16px;text-decoration:none;display:block;transition:.2s}
+.acl-ty-link-card:hover{border-color:#1B3A5C;box-shadow:0 4px 12px rgba(27,58,92,.1);transform:translateY(-1px)}
+.acl-ty-link-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#2E8B57;margin-bottom:5px}
+.acl-ty-link-title{font-size:14px;font-weight:700;color:#1E293B;line-height:1.3;margin-bottom:4px}
+.acl-ty-link-desc{font-size:12.5px;color:#64748B;line-height:1.5}
+
+/* PAYOFF */
+.acl-ty-payoff{text-align:center;padding:28px;background:#1B3A5C;border-radius:12px;color:#fff}
+.acl-ty-payoff p{font-size:18px;font-style:italic;font-weight:700;margin-bottom:6px}
+.acl-ty-payoff span{font-size:12px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1.5px}
+
+@media(max-width:600px){
+  .acl-ty-contact-items,.acl-ty-prepare-list,.acl-ty-link-grid{grid-template-columns:1fr}
+}
+</style>
+
+<div class="acl-ty-wrap" role="main">
+
+  <!-- CONFIRMATION HERO -->
+  <div class="acl-ty-hero">
+    <div class="acl-ty-check" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+    </div>
+    <p class="acl-ty-eyebrow">Assessment Requested</p>
+    <h1>Your request is in. We will be in touch within one business day.</h1>
+    <p>You have taken the right step. The next one is ours — we will contact you to schedule a facility walk-through at a time that works for you.</p>
+  </div>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <div class="acl-ty-steps">
+    <h2>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      What Happens Next
+    </h2>
+    <div class="acl-ty-step-list">
+      <div class="acl-ty-step">
+        <div class="acl-ty-step-num" aria-hidden="true">1</div>
+        <div class="acl-ty-step-body">
+          <strong>We contact you to schedule the walk-through</strong>
+          <p>Omar or a senior account manager will call you directly to confirm a time for the facility assessment. No call centre, no automated scheduling — a named person who already knows your submission.</p>
+          <span class="acl-ty-step-timing"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Within one business day</span>
+        </div>
+      </div>
+      <div class="acl-ty-step">
+        <div class="acl-ty-step-num" aria-hidden="true">2</div>
+        <div class="acl-ty-step-body">
+          <strong>We walk your facility — in person</strong>
+          <p>We assess every zone, surface type, compliance requirement, and operational constraint specific to your building. We do not produce estimates from a phone call or a description.</p>
+          <span class="acl-ty-step-timing"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>At a time that works for your building operations</span>
+        </div>
+      </div>
+      <div class="acl-ty-step">
+        <div class="acl-ty-step-num" aria-hidden="true">3</div>
+        <div class="acl-ty-step-body">
+          <strong>You receive a written cleaning plan within 48 hours</strong>
+          <p>A custom programme for your specific facility — services, schedule, quality system, compliance inclusions, and pricing. In writing. No surprises, no verbal commitments.</p>
+          <span class="acl-ty-step-timing"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Within 48 hours of the walk-through</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REASSURANCE QUOTE -->
+  <div class="acl-ty-reassure" role="note">
+    <div class="acl-ty-reassure-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 2v11c0 1 .5 2 2 2h1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 2v11c0 1 .5 2 2 2h1z"/></svg>
+    </div>
+    <div>
+      <p>"I can honestly say that in my twenty years' experience, Advantage Cleaning is by far the best cleaning company I have ever worked with. If given the choice to bring them in-house, I would refuse — because of how good a job they do."</p>
+      <cite>— Director of Facilities, Major NYC Visitor Attraction · 20-year client</cite>
+    </div>
+  </div>
+
+  <!-- DIRECT CONTACT -->
+  <div class="acl-ty-contact">
+    <h3>Prefer to reach us directly?</h3>
+    <div class="acl-ty-contact-items">
+      <a href="tel:2129297872" class="acl-ty-contact-item">
+        <div class="acl-ty-contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.2 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><strong>(212) 929-7872</strong><span>Mon–Fri, 8AM–6PM</span></div>
+      </a>
+      <a href="mailto:info@advantagecleaningllc.net" class="acl-ty-contact-item">
+        <div class="acl-ty-contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
+        <div><strong>info@advantagecleaningllc.net</strong><span>Response within one business day</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- WHAT TO PREPARE -->
+  <div class="acl-ty-prepare">
+    <h3>Useful to have ready for the walk-through</h3>
+    <ul class="acl-ty-prepare-list">
+      <li>Approximate square footage per floor or zone</li>
+      <li>Current cleaning frequency (daily, 3×/week, etc.)</li>
+      <li>Floor types (VCT, carpet, marble, concrete)</li>
+      <li>Any compliance requirements (schools, healthcare, LEED)</li>
+      <li>Number of restrooms and their locations</li>
+      <li>Operational hours and access constraints</li>
+    </ul>
+  </div>
+
+  <!-- RELATED LINKS -->
+  <div class="acl-ty-links">
+    <h3>While you wait — useful reading</h3>
+    <div class="acl-ty-link-grid">
+      <a href="/quality-system/" class="acl-ty-link-card">
+        <div class="acl-ty-link-label">The Quality System</div>
+        <div class="acl-ty-link-title">How We Verify Every Shift</div>
+        <p class="acl-ty-link-desc">The 6-step cycle that keeps standards consistent — and what you receive every week.</p>
+      </a>
+      <a href="/why-advantage-cleaning/" class="acl-ty-link-card">
+        <div class="acl-ty-link-label">Why Advantage</div>
+        <div class="acl-ty-link-title">Claims vs Evidence — The Full Comparison</div>
+        <p class="acl-ty-link-desc">What we do differently from every other commercial cleaning company in NYC.</p>
+      </a>
+      <a href="/meet-the-team/" class="acl-ty-link-card">
+        <div class="acl-ty-link-label">The Team</div>
+        <div class="acl-ty-link-title">The People Who Will Be Working Your Building</div>
+        <p class="acl-ty-link-desc">Six specialist roles, trained to standard, supervised every shift.</p>
+      </a>
+      <a href="/about/" class="acl-ty-link-card">
+        <div class="acl-ty-link-label">About</div>
+        <div class="acl-ty-link-title">Omar, Anna, and Why We Built This</div>
+        <p class="acl-ty-link-desc">The story behind the quality system — and the people accountable for it.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- PAYOFF -->
+  <div class="acl-ty-payoff">
+    <p>"We take pride in your appearance."</p>
+    <span>The ownership commitment behind every Advantage Cleaning contract</span>
+  </div>
+
+</div>
